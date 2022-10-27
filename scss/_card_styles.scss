@@ -1,0 +1,30 @@
+/**========================================================================
+ *                          CARD STYLES
+ *========================================================================**/
+
+//STYLE 1
+.card_style1 {
+  grid-row: span 2;
+}
+
+//STYLE 2
+.card_style2 {
+  grid-row: span 2;
+}
+
+//STYLE 3
+.card_style3 {
+  grid-row: span 4;
+}
+
+//CONTAINERS
+
+//Header
+.card_header-contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  width: 90%;
+}

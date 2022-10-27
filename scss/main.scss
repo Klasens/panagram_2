@@ -1,0 +1,18 @@
+/**=======================================================================================================================
+ **                                                    MAIN
+ *=======================================================================================================================**/
+
+//BASE
+@import 'variables';
+@import 'media-breakpoints';
+@import 'mixins';
+@import 'base';
+
+//GRID
+@import 'grid';
+
+//CARDS
+@import 'card_universal';
+@import 'card_header';
+@import 'card_footer';
+@import 'card_styles';
