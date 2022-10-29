@@ -2,45 +2,90 @@
  *                          CARD_STYLE1 
  *========================================================================**/
 
-.card-universal {
+.gridCard-universal {
   border-radius: 15px;
-  background-color: $color-cream;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
-.card-tag {
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: $color-orange;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-}
-.card-tag--color2 {
-  font-size: 3rem;
-  color: white;
+.contentCard-universal {
+  //All children of main content cards have margin-top 2rem (excludes header and footer cards)
+  & > * {
+    margin-top: 2rem;
+  }
 }
 
-.card-number {
-  text-align: center;
-  font-size: 10rem;
-  color: white;
+// ----- CARD STYLES ----- //
+
+.card {
+  &-heart {
+    display: inline;
+    color: $color-red;
+    font-size: $fontSize-smile;
+
+    &-h2 {
+      font-size: $fontSize-smile;
+      font-weight: $fontWeight--h2;
+    }
+
+    &LikeCount {
+      color: $color-black;
+      font-size: $fontSize-smile;
+    }
+  }
+}
+// ----- CARD CHOCOLATE STYLES ----- //
+
+.cardChocolate {
+  &-tag {
+    font-size: $fontSize--tag;
+    font-weight: $fontWeight--tag;
+    background-color: $color-orange;
+    padding: $padding--tag;
+    border-radius: $borderRadius--tag;
+  }
+
+  &-h2 {
+    font-size: $fontSize--h2;
+    font-weight: $fontWeight--h2;
+    color: $color-white;
+  }
+  &-text {
+    font-size: $fontSize--text;
+    color: $color-white;
+  }
+
+  &-btn {
+    font-size: $fontSize--btn;
+    color: $color-white;
+    padding: $padding--btn;
+    border-radius: $borderRadius--btn;
+    border: 2px solid $color-white;
+  }
 }
 
-.card-h2 {
-  font-size: 5rem;
-  color: white;
-}
+// ----- CARD CREAM STYLES ----- //
 
-.card-text {
-  font-size: 3rem;
-  color: white;
-}
+.cardCream {
+  &-tag {
+    font-size: $fontSize--tag;
+    font-weight: $fontWeight--tag;
+    background-color: $color-orange;
+    padding: $padding--tag;
+    border-radius: $borderRadius--tag;
+  }
 
-.card-btn {
-  padding: 1rem 2rem;
-  background-color: white;
-  text-align: center;
-  font-size: 2rem;
+  &-h2 {
+    font-size: $fontSize--h2;
+    font-weight: $fontWeight--h2;
+  }
+  &-text {
+    font-size: $fontSize--text;
+  }
+
+  &-btn {
+    font-size: $fontSize--btn;
+    padding: $padding--btn;
+    border-radius: $borderRadius--btn;
+    border: 2px solid $color-black;
+  }
 }

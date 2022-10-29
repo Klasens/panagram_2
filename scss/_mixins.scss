@@ -1,3 +1,16 @@
 /**========================================================================
  *                           Mixins
  *========================================================================**/
+@mixin center_flex_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center_flex_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

@@ -2,29 +2,66 @@
  *                          CARD STYLES
  *========================================================================**/
 
+/* ---------- GRID PROPERTIES ---------- */
+
+//HEADER
+.card_header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 5;
+  background-color: $color-cream;
+  @include center_flex_column;
+}
+
 //STYLE 1
 .card_style1 {
   grid-row: span 2;
+  background-color: $color-chocolate;
+  @include center_flex_column;
 }
 
 //STYLE 2
 .card_style2 {
-  grid-row: span 2;
+  grid-row: span 4;
+  background-color: $color-cream;
+  background-image: url(../img/bob_smile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include center_flex_column;
 }
 
 //STYLE 3
 .card_style3 {
   grid-row: span 4;
+  background-color: $color-cream;
+  @include center_flex_column;
 }
 
-//CONTAINERS
+//FOOTER
+.card_footer {
+  grid-column: 1 / 4;
+  background-color: $color-cream;
+  @include center_flex_column;
+}
 
-//Header
+/* ---------- CONTAINER PROPERTIES ---------- */
+
 .card_header-contentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 90%;
-  width: 90%;
+  width: 85%;
+  //Overwriting justify content from
+  @include center_flex_column;
+  justify-content: space-between;
+}
+.card_footer-contentContainer {
+  width: 85%;
+  font-size: 1.9rem;
+}
+.card_style1-contentContainer {
+  width: 85%;
+  @include center_flex_column;
+}
+
+.card_style2-contentContainer {
+  position: relative;
+  height: 100%;
 }
