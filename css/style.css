@@ -52,6 +52,9 @@ a {
   color: #0000ee;
   text-decoration: none; }
 
+img {
+  height: 100%; }
+
 /**========================================================================
  *                          GRID 
  *========================================================================**/
@@ -62,7 +65,7 @@ a {
 
 .grid {
   margin: 5rem 0;
-  width: 75%;
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(15rem, auto);
@@ -71,9 +74,11 @@ a {
 
 .grid-inner {
   display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr;
   grid-column: 1 / 4;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 12rem;
+  grid-auto-rows: minmax(12rem, auto);
   column-gap: 4rem;
   row-gap: 4rem; }
 
@@ -83,7 +88,6 @@ a {
 /* ---------- GRID PROPERTIES ---------- */
 .card_header {
   grid-column: 1 / 4;
-  grid-row: 1 / 5;
   background-color: #ffd1aa;
   display: flex;
   flex-direction: column;
@@ -91,7 +95,8 @@ a {
   align-items: center; }
 
 .card_style1 {
-  grid-row: span 2;
+  height: min-content;
+  padding-bottom: 2rem;
   background-color: #433e3c;
   display: flex;
   flex-direction: column;
@@ -99,7 +104,7 @@ a {
   align-items: center; }
 
 .card_style2 {
-  grid-row: span 4;
+  height: 50rem;
   background-color: #ffd1aa;
   background-image: url(../img/bob_smile.jpg);
   background-size: cover;
@@ -110,7 +115,8 @@ a {
   align-items: center; }
 
 .card_style3 {
-  grid-row: span 4;
+  height: min-content;
+  padding-bottom: 2rem;
   background-color: #ffd1aa;
   display: flex;
   flex-direction: column;
@@ -149,6 +155,13 @@ a {
 .card_style2-contentContainer {
   position: relative;
   height: 100%; }
+
+.card_style3-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /**========================================================================
  *                          CARD_STYLE1 
@@ -212,7 +225,28 @@ a {
   font-size: 1.5rem;
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
-  border: 2px solid #333333; }
+  border: 2px solid #333333;
+  background-color: #ffd1aa; }
+
+.cardCream-form {
+  width: 100%; }
+  .cardCream-form > input {
+    margin-bottom: 1rem; }
+  .cardCream-form--label {
+    display: block;
+    font-size: 1.8rem; }
+  .cardCream-form--inputName {
+    border: 1px solid #433e3c;
+    height: 2.5rem;
+    width: 90%; }
+  .cardCream-form--email {
+    border: 1px solid #433e3c;
+    height: 2.5rem;
+    width: 90%; }
+  .cardCream-form--inputMessage {
+    border: 1px solid #433e3c;
+    height: 7rem;
+    width: 90%; }
 
 /**========================================================================
  *                          CARD_HEADER 

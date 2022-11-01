@@ -7,21 +7,25 @@
 //HEADER
 .card_header {
   grid-column: 1 / 4;
-  grid-row: 1 / 5;
+  // grid-row: 1 / 5;
   background-color: $color-cream;
   @include center_flex_column;
+  // display: none;
 }
 
 //STYLE 1
 .card_style1 {
-  grid-row: span 2;
+  // grid-row: span 2;
+  height: min-content;
+  padding-bottom: 2rem;
   background-color: $color-chocolate;
   @include center_flex_column;
 }
 
 //STYLE 2
 .card_style2 {
-  grid-row: span 4;
+  // grid-row: span 4;a
+  height: 50rem;
   background-color: $color-cream;
   background-image: url(../img/bob_smile.jpg);
   background-size: cover;
@@ -31,7 +35,9 @@
 
 //STYLE 3
 .card_style3 {
-  grid-row: span 4;
+  // grid-row: span 3;
+  height: min-content;
+  padding-bottom: 2rem;
   background-color: $color-cream;
   @include center_flex_column;
 }
@@ -52,10 +58,12 @@
   @include center_flex_column;
   justify-content: space-between;
 }
+
 .card_footer-contentContainer {
   width: 85%;
   font-size: 1.9rem;
 }
+
 .card_style1-contentContainer {
   width: 85%;
   @include center_flex_column;
@@ -64,4 +72,12 @@
 .card_style2-contentContainer {
   position: relative;
   height: 100%;
+}
+
+.card_style3-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
