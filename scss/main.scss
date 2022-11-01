@@ -9,10 +9,10 @@
 @import 'base';
 
 //GRID
-@import 'grid';
+@import 'mainGrid';
+@import 'gridCard_properties';
 
 //CARDS
-@import 'card_styles';
 @import 'card_universal';
+@import 'card_styles';
 @import 'card_header';
-@import 'card_footer';

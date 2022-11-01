@@ -1,8 +1,9 @@
 /**========================================================================
- *                          GRID 
+ *                          MAIN GRID 
  *========================================================================**/
 
 .grid_container {
+  // Body Tag
   display: flex;
   justify-content: center;
   background-color: $color-aqua;
@@ -16,6 +17,9 @@
   grid-auto-rows: minmax(15rem, auto);
   column-gap: 3rem;
   row-gap: 3rem;
+  @include respond(break-1600) {
+    width: 75%;
+  }
 }
 
 .grid-inner {

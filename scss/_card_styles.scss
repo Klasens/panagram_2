@@ -1,83 +1,80 @@
 /**========================================================================
- *                          CARD STYLES
+ *                          INDIVIDUAL CARD STYLES
  *========================================================================**/
 
-/* ---------- GRID PROPERTIES ---------- */
+// ----- CARD FORM ----- //
+.card-form {
+  width: 100%;
 
-//HEADER
-.card_header {
-  grid-column: 1 / 4;
-  // grid-row: 1 / 5;
-  background-color: $color-cream;
-  @include center_flex_column;
-  // display: none;
+  > input {
+    margin-bottom: 1rem;
+  }
+
+  &--label {
+    display: block;
+    font-size: $fontSize--text;
+  }
+
+  &--inputName {
+    border: 1px solid $color-chocolate;
+    height: 2.5rem;
+    width: 90%;
+  }
+
+  &--email {
+    border: 1px solid $color-chocolate;
+    height: 2.5rem;
+    width: 90%;
+  }
+
+  &--inputMessage {
+    border: 1px solid $color-chocolate;
+    height: 7rem;
+    width: 90%;
+  }
 }
 
-//STYLE 1
-.card_style1 {
-  // grid-row: span 2;
-  height: min-content;
-  padding-bottom: 2rem;
+// ----- CARD SMILE ----- //
+
+.card-heart {
+  display: inline;
+  color: $color-red;
+  font-size: $fontSize-smile;
+
+  &-h2 {
+    font-size: $fontSize-smile;
+    font-weight: $fontWeight--h2;
+  }
+
+  &LikeCount {
+    color: $color-black;
+    font-size: $fontSize-smile;
+  }
+}
+
+// ----- CARD TIME DISPLAY ----- //
+
+.card-shapeContainer {
+  @include center_flex_row;
+  height: 20rem;
+  width: 100%;
+  border-radius: 15px;
   background-color: $color-chocolate;
-  @include center_flex_column;
 }
 
-//STYLE 2
-.card_style2 {
-  // grid-row: span 4;a
-  height: 50rem;
-  background-color: $color-cream;
-  background-image: url(../img/bob_smile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include center_flex_column;
-}
-
-//STYLE 3
-.card_style3 {
-  // grid-row: span 3;
-  height: min-content;
-  padding-bottom: 2rem;
-  background-color: $color-cream;
-  @include center_flex_column;
-}
-
-//FOOTER
-.card_footer {
-  grid-column: 1 / 4;
-  background-color: $color-cream;
-  @include center_flex_column;
-}
-
-/* ---------- CONTAINER PROPERTIES ---------- */
-
-.card_header-contentContainer {
-  height: 90%;
-  width: 85%;
-  //Overwriting justify content from
-  @include center_flex_column;
-  justify-content: space-between;
-}
-
-.card_footer-contentContainer {
-  width: 85%;
-  font-size: 1.9rem;
-}
-
-.card_style1-contentContainer {
-  width: 85%;
-  @include center_flex_column;
-}
-
-.card_style2-contentContainer {
+.card-square {
   position: relative;
-  height: 100%;
+  width: 3rem;
+  height: 3rem;
+  background-color: $color-cream;
+  margin: 2rem;
 }
 
-.card_style3-contentContainer {
-  width: 85%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-circle {
+  position: relative;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: $color-cream;
+  margin: 2rem;
 }

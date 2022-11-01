@@ -2,38 +2,22 @@
  *                          CARD_STYLE1 
  *========================================================================**/
 
+// ----- Outer Container
 .gridCard-universal {
   border-radius: 15px;
   overflow: hidden;
 }
 
+// ----- Inner Container
 .contentCard-universal {
   // height: min-content;
   //All children of main content cards have margin-top 2rem (excludes header and footer cards)
   & > * {
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 }
 
-// ----- CARD STYLES ----- //
-
-//Card Smile
-.card-heart {
-  display: inline;
-  color: $color-red;
-  font-size: $fontSize-smile;
-
-  &-h2 {
-    font-size: $fontSize-smile;
-    font-weight: $fontWeight--h2;
-  }
-
-  &LikeCount {
-    color: $color-black;
-    font-size: $fontSize-smile;
-  }
-}
-// ----- CARD CHOCOLATE STYLES ----- //
+// ----- UNIVERSAL CARD CHOCOLATE STYLES ----- //
 
 .cardChocolate {
   &-tag {
@@ -63,9 +47,15 @@
   }
 }
 
-// ----- CARD CREAM STYLES ----- //
+// ----- UNIVERSAL CARD CREAM STYLES ----- //
 
 .cardCream {
+  &-wrapper {
+    @include center_flex_column;
+    & > * {
+      margin: 1rem 0;
+    }
+  }
   &-tag {
     font-size: $fontSize--tag;
     font-weight: $fontWeight--tag;
@@ -88,37 +78,5 @@
     border-radius: $borderRadius--btn;
     border: 2px solid $color-black;
     background-color: $color-cream;
-  }
-
-  //Form
-  &-form {
-    width: 100%;
-
-    > input {
-      margin-bottom: 1rem;
-    }
-
-    &--label {
-      display: block;
-      font-size: $fontSize--text;
-    }
-
-    &--inputName {
-      border: 1px solid $color-chocolate;
-      height: 2.5rem;
-      width: 90%;
-    }
-
-    &--email {
-      border: 1px solid $color-chocolate;
-      height: 2.5rem;
-      width: 90%;
-    }
-
-    &--inputMessage {
-      border: 1px solid $color-chocolate;
-      height: 7rem;
-      width: 90%;
-    }
   }
 }

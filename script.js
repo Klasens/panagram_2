@@ -13,16 +13,14 @@ const founderCard = document.querySelector('.card_style1');
 // Cards Array
 const cardsArrayOfObjects = [
   { cardID: 'card-smile' },
-  // { cardID: 'card-smile' },
-  // { cardID: 'card-smile' },
   { cardID: 'card-form' },
-  { cardID: 'card-form' },
-  { cardID: 'card-form' },
-  { cardID: 'card-form' },
-  { cardID: 'card-form' },
-  { cardID: 'card-form' },
-  { cardID: 'card-form' },
-  { cardID: 'card-form' },
+  // { cardID: 'card-form' },
+  // { cardID: 'card-form' },
+  // { cardID: 'card-form' },
+  // { cardID: 'card-form' },
+  // { cardID: 'card-form' },
+  // { cardID: 'card-form' },
+  // { cardID: 'card-form' },
 ];
 
 // Assign each element of an array an ID# property
@@ -65,27 +63,27 @@ const loadAllCards = function (array) {
         <div class='card_style3-contentContainer contentCard-universal'>
           <span class='cardCream-tag'>Form</span>
           <h2 class='cardCream-h2'>Contact Me</h2>
-          <form action='' class='cardCream-form'>
-            <label class='cardCream-form--label' for='fullName'>
+          <form action='' class='card-form'>
+            <label class='card-form--label' for='fullName'>
               Name
             </label>
             <input
-              class='cardCream-form--inputName'
+              class='card-form--inputName'
               type='text'
               name='fullName'
             />
-            <label class='cardCream-form--label' for='email'>
+            <label class='card-form--label' for='email'>
               Email
             </label>
-            <input class='cardCream-form--email' type='text' name='email' />
-            <label class='cardCream-form--label' for='message'>
+            <input class='card-form--email' type='text' name='email' />
+            <label class='card-form--label' for='message'>
               Message
             </label>
-            <input
-              class='cardCream-form--inputMessage'
+            <textarea
+              class='card-form--inputMessage'
               type='text'
               name='message'
-            />
+            ></textarea>
           </form>
           <button class='cardCream-btn'>Submit</button>
         </div>
