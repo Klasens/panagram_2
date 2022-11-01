@@ -23,9 +23,17 @@
   &-tag {
     font-size: $fontSize--tag;
     font-weight: $fontWeight--tag;
-    background-color: $color-orange;
     padding: $padding--tag;
     border-radius: $borderRadius--tag;
+    &--founder {
+      background-color: $color-orange;
+    }
+    &--fiction {
+      background-color: $color-light-green;
+    }
+    &--nonfiction {
+      background-color: $color-yellow;
+    }
   }
 
   &-h2 {
@@ -59,9 +67,11 @@
   &-tag {
     font-size: $fontSize--tag;
     font-weight: $fontWeight--tag;
-    background-color: $color-orange;
     padding: $padding--tag;
     border-radius: $borderRadius--tag;
+    &--form {
+      background-color: $color-light-purple;
+    }
   }
 
   &-h2 {

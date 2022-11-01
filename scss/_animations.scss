@@ -1,0 +1,44 @@
+/**============================================
+   *              ANIMATIONS 
+   *=============================================**/
+
+@keyframes square-one {
+  40% {
+    transform: translate(-120%, -120%) rotate(180deg);
+  }
+
+  70% {
+    transform: translate(180%, 180%) rotate(360deg);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes square-two {
+  40% {
+    transform: translate(180%, 180%) rotate(360deg);
+  }
+
+  70% {
+    transform: translate(-120%, -120%) rotate(720deg);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes circle {
+  40% {
+    transform: translateY(185%);
+  }
+
+  70% {
+    transform: translateY(-185%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

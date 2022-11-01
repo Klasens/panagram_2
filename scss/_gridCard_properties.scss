@@ -76,6 +76,30 @@
   flex-direction: column;
   align-items: center;
 }
+
+/* ---------- STYLE 5 ---------- */
+.card_style5 {
+  height: min-content;
+  background-color: $color-light-chocolate;
+  @include center_flex_column;
+}
+
+.card_style5-contentContainer {
+  width: 85%;
+  @include center_flex_column;
+}
+
+/* ---------- STYLE 6 ---------- */
+.card_style6 {
+  height: min-content;
+  background-color: $color-light-chocolate;
+  @include center_flex_column;
+}
+
+.card_style6-contentContainer {
+  width: 85%;
+  @include center_flex_column;
+}
 /* ---------- FOOTER ---------- */
 .card_footer {
   grid-column: 1 / 4;

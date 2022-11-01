@@ -14,7 +14,10 @@ const founderCard = document.querySelector('.card_style1');
 const cardsArrayOfObjects = [
   { cardID: 'card-smile' },
   { cardID: 'card-form' },
-  // { cardID: 'card-form' },
+  { cardID: 'card-shapeContainer' },
+  { cardID: 'card-theWatchers' },
+  { cardID: 'card-MITM' },
+  { cardID: 'card-andToday' },
   // { cardID: 'card-form' },
   // { cardID: 'card-form' },
   // { cardID: 'card-form' },
@@ -32,6 +35,7 @@ const assignIDs = function (array) {
   return array_IDs;
 };
 
+/* --------------------------- EXTREMELY LONG IF STATEMENT --------------------------- */
 //Randomly create HTML for each element in array object
 const loadAllCards = function (array) {
   const arrayCopy = array.slice();
@@ -40,6 +44,7 @@ const loadAllCards = function (array) {
     const el = arrayCopy.splice(random, 1)[0];
     let html;
     console.log(Object.keys(el));
+    /* ------------- CARD SMILE ------------- */
     if (el.cardID === 'card-smile') {
       console.log('test');
       html = document.createElement('div');
@@ -55,13 +60,14 @@ const loadAllCards = function (array) {
         </div>
   `;
       founderCard.after(html);
-    } else {
+      /* ------------- CARD FORM ------------- */
+    } else if (el.cardID === 'card-form') {
       html = document.createElement('div');
       html.innerHTML = `
       
       <div class='card_style3 gridCard-universal'>
         <div class='card_style3-contentContainer contentCard-universal'>
-          <span class='cardCream-tag'>Form</span>
+          <span class='cardCream-tag cardCream-tag--form'>Form</span>
           <h2 class='cardCream-h2'>Contact Me</h2>
           <form action='' class='card-form'>
             <label class='card-form--label' for='fullName'>
@@ -90,29 +96,88 @@ const loadAllCards = function (array) {
       </div>;
       `;
       founderCard.after(html);
+      /* ------------- CARD SHAPECONTAINER ------------- */
+    } else if (el.cardID === 'card-shapeContainer') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class="card_style4 gridCard-universal">
+          <div class="card_style4-contentContainer contentCard-universal">
+            <div class="card-shapeContainer">
+              <div class="card-square square-one"></div>
+              <div class="card-circle circle"></div>
+              <div class="card-square square-two"></div>
+            </div>
+            <h2 class="cardCream-h2">Time In a Year:</h2>
+            <div class="cardCream-wrapper">
+              <p class="cardCream-text card-timerDays">365 days</p>
+              <p class="cardCream-text card-timerHours">8,760 hours</p>
+              <p class="cardCream-text card-timerMinutes">525,600 minutes</p>
+              <p class="cardCream-text card-timerSeconds">31,536,000 seconds</p>
+            </div>
+          </div>
+        </div>
+      `;
+      founderCard.after(html);
+    } else if (el.cardID === 'card-theWatchers') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class="card_style5 gridCard-universal">
+          <div class="card_style5-contentContainer contentCard-universal">
+            <span class="cardChocolate-tag cardChocolate-tag--nonfiction">
+              Creative Non-Fiction
+            </span>
+            <h2 class="cardChocolate-h2">The Watchers</h2>
+            <p class="cardChocolate-text">
+              "Usually I just sit on the bus having conversations with
+              myself..."
+            </p>
+            <btn class="cardChocolate-btn">Read Now</btn>
+          </div>
+        </div>
+      `;
+      founderCard.after(html);
+    } else if (el.cardID === 'card-andToday') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class="card_style5 gridCard-universal">
+          <div class="card_style5-contentContainer contentCard-universal">
+            <span class="cardChocolate-tag cardChocolate-tag--nonfiction">
+              Creative Non-Fiction
+            </span>
+            <h2 class="cardChocolate-h2">And, Today</h2>
+            <p class="cardChocolate-text">
+              "And, today I wake up with the thought, "This could be the final
+              morning..."
+            </p>
+            <btn class="cardChocolate-btn">Read Now</btn>
+          </div>
+        </div>
+      `;
+      founderCard.after(html);
+    } else if (el.cardID === 'card-MITM') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class="card_style6 gridCard-universal">
+          <div class="card_style6-contentContainer contentCard-universal">
+            <span class="cardChocolate-tag cardChocolate-tag--fiction">
+              Fiction
+            </span>
+            <h2 class="cardChocolate-h2">Mirror In the Mirror</h2>
+            <p class="cardChocolate-text">
+              "As I wake up I feel a pulsing in my foot. There's this slight
+              pulling in the tendon that produces discomfort but not pain..."
+            </p>
+            <btn class="cardChocolate-btn">Read Now</btn>
+          </div>
+        </div>
+      `;
+      founderCard.after(html);
     }
   }
 };
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
-
-/* --------------------------- CARDS --------------------------- */
-
-/* ------------------- SmileCard ------------------ */
-
-// Selectors
-const heartCard = gridInner.querySelector('#cardHeart');
-const heartCount = gridInner.querySelector('#heartCount');
-
-// Variables
-let i = 0;
-
-// Event Listeners
-heartCard.addEventListener('click', function () {
-  i++;
-  heartCount.innerText = i;
-});
 
 //Randomizers (UNUSED)
 const randomInt = (min, max) =>
