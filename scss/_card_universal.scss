@@ -2,10 +2,15 @@
  *                          CARD_STYLE1 
  *========================================================================**/
 
+.gridCard-universal.show {
+  transform: translateY(0);
+}
 // ----- Outer Container
 .gridCard-universal {
   border-radius: 15px;
   overflow: hidden;
+  transform: translateY(50%);
+  transition: all 0.3s;
 }
 
 // ----- Inner Container
@@ -52,6 +57,7 @@
     padding: $padding--btn;
     border-radius: $borderRadius--btn;
     border: 2px solid $color-white;
+    cursor: pointer;
   }
 }
 
@@ -72,6 +78,9 @@
     &--form {
       background-color: $color-light-purple;
     }
+    &--header {
+      background-color: $color-orange;
+    }
   }
 
   &-h2 {
@@ -88,5 +97,6 @@
     border-radius: $borderRadius--btn;
     border: 2px solid $color-black;
     background-color: $color-cream;
+    cursor: pointer;
   }
 }

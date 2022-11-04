@@ -62,7 +62,7 @@ const loadAllCards = function (array) {
       founderCard.after(html);
       /* ------------- CARD FORM ------------- */
     } else if (el.cardID === 'card-form') {
-      html = document.createElement('div');
+      html = document.createElement(`div`);
       html.innerHTML = `
       
       <div class='card_style3 gridCard-universal'>
@@ -101,7 +101,10 @@ const loadAllCards = function (array) {
       html = document.createElement('div');
       html.innerHTML = `
         <div class="card_style4 gridCard-universal">
-          <div class="card_style4-contentContainer contentCard-universal">
+          <div
+            class="card_style4-contentContainer contentCard-universal"
+            id="timeInaYear"
+          >
             <div class="card-shapeContainer">
               <div class="card-square square-one"></div>
               <div class="card-circle circle"></div>
@@ -109,10 +112,34 @@ const loadAllCards = function (array) {
             </div>
             <h2 class="cardCream-h2">Time In a Year:</h2>
             <div class="cardCream-wrapper">
-              <p class="cardCream-text card-timerDays">365 days</p>
-              <p class="cardCream-text card-timerHours">8,760 hours</p>
-              <p class="cardCream-text card-timerMinutes">525,600 minutes</p>
-              <p class="cardCream-text card-timerSeconds">31,536,000 seconds</p>
+              <div class="cardCream-text">
+                <span
+                  class="cardCream-text timeCounter"
+                  data-target="365"
+                ></span>
+                <span class="cardCream-text">days</span>
+              </div>
+              <div class="cardCream-text">
+                <span
+                  class="cardCream-text timeCounter"
+                  data-target="8760"
+                ></span>
+                <span class="cardCream-text">hours</span>
+              </div>
+              <div class="cardCream-text">
+                <span
+                  class="cardCream-text timeCounter"
+                  data-target="525600"
+                ></span>
+                <span class="cardCream-text">minutes</span>
+              </div>
+              <div class="cardCream-text">
+                <span
+                  class="cardCream-text timeCounter"
+                  data-target="31536000"
+                ></span>
+                <span class="cardCream-text">seconds</span>
+              </div>
             </div>
           </div>
         </div>
@@ -122,6 +149,8 @@ const loadAllCards = function (array) {
       html = document.createElement('div');
       html.innerHTML = `
         <div class="card_style5 gridCard-universal">
+          <div class="designLine-right borderColorYellow"></div>
+          <div class="designLine-left borderColorYellow"></div>
           <div class="card_style5-contentContainer contentCard-universal">
             <span class="cardChocolate-tag cardChocolate-tag--nonfiction">
               Creative Non-Fiction
@@ -140,6 +169,8 @@ const loadAllCards = function (array) {
       html = document.createElement('div');
       html.innerHTML = `
         <div class="card_style5 gridCard-universal">
+          <div class="designLine-right borderColorYellow"></div>
+          <div class="designLine-left borderColorYellow"></div>
           <div class="card_style5-contentContainer contentCard-universal">
             <span class="cardChocolate-tag cardChocolate-tag--nonfiction">
               Creative Non-Fiction
@@ -158,6 +189,8 @@ const loadAllCards = function (array) {
       html = document.createElement('div');
       html.innerHTML = `
         <div class="card_style6 gridCard-universal">
+          <div class="designLine-right borderColorGreen"></div>
+          <div class="designLine-left borderColorGreen"></div>
           <div class="card_style6-contentContainer contentCard-universal">
             <span class="cardChocolate-tag cardChocolate-tag--fiction">
               Fiction
@@ -178,10 +211,3 @@ const loadAllCards = function (array) {
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
-
-//Randomizers (UNUSED)
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
-
-const randomColor = () =>
-  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;

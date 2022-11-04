@@ -14,3 +14,33 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin designLine-top {
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  position: absolute;
+  bottom: 96%;
+}
+
+@mixin designLine-bottom {
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  position: absolute;
+  top: 96%;
+}
+@mixin designLine-right {
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  position: absolute;
+  left: 95%;
+}
+@mixin designLine-left {
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  position: absolute;
+  right: 95%;
+}

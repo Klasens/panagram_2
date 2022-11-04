@@ -93,3 +93,27 @@
 // ----- CARD CREATIVE NONFICTION ----- //
 
 // ----- CARD FICTION ----- //
+
+.borderColorOrange {
+  border: 1px solid $color-orange;
+}
+.borderColorYellow {
+  border: 1px solid $color-yellow;
+}
+.borderColorGreen {
+  border: 1px solid $color-light-green;
+}
+.designLine {
+  &-top {
+    @include designLine-top;
+  }
+  &-bottom {
+    @include designLine-bottom;
+  }
+  &-right {
+    @include designLine-right;
+  }
+  &-left {
+    @include designLine-left;
+  }
+}

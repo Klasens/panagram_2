@@ -1,7 +1,10 @@
 /**========================================================================
  *                          CARD_HEADER 
  *========================================================================**/
-
+.card_header {
+  border-radius: 15px;
+  overflow: hidden;
+}
 .card_header-mainHead {
   font-family: $fontFamily-spaceMono;
   font-size: 17rem;

@@ -24,6 +24,7 @@
 /* ---------- STYLE 1 ---------- */
 .card_style1 {
   height: min-content;
+  position: relative;
   background-color: $color-chocolate;
   @include center_flex_column;
 }
@@ -65,7 +66,7 @@
 
 /* ---------- STYLE 4 ---------- */
 .card_style4 {
-  height: min-content;
+  cursor: pointer;
   background-color: $color-cream;
   @include center_flex_column;
 }
@@ -79,6 +80,7 @@
 
 /* ---------- STYLE 5 ---------- */
 .card_style5 {
+  position: relative;
   height: min-content;
   background-color: $color-light-chocolate;
   @include center_flex_column;
@@ -91,7 +93,7 @@
 
 /* ---------- STYLE 6 ---------- */
 .card_style6 {
-  height: min-content;
+  position: relative;
   background-color: $color-light-chocolate;
   @include center_flex_column;
 }
