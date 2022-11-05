@@ -35,7 +35,7 @@ const assignIDs = function (array) {
   return array_IDs;
 };
 
-/* --------------------------- EXTREMELY LONG IF STATEMENT --------------------------- */
+/* --------------------------- DREADFULLY LONG IF STATEMENT --------------------------- */
 //Randomly create HTML for each element in array object
 const loadAllCards = function (array) {
   const arrayCopy = array.slice();
@@ -100,51 +100,56 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-shapeContainer') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style4 gridCard-universal">
-          <div
-            class="card_style4-contentContainer contentCard-universal"
-            id="timeInaYear"
-          >
-            <div class="card-shapeContainer">
-              <div class="card-square square-one"></div>
-              <div class="card-circle circle"></div>
-              <div class="card-square square-two"></div>
+          <div class="card_style4 gridCard-universal">
+            <div
+              class="card_style4-contentContainer contentCard-universal"
+              id="timeInaYear"
+            >
+              <div class="card-shapeContainer">
+                <div class="card-square-left square-one"></div>
+                <div class="card-square-left square-three"></div>
+                <div class="card-circle circle-one"></div>
+                <div class="card-circle circle-two"></div>
+                <div class="card-circle circle-three"></div>
+                <div class="card-circle circle-four"></div>
+                <div class="card-square-right square-two"></div>
+                <div class="card-square-right square-four"></div>
+              </div>
+              <h2 class="cardCream-h2">Time In a Year:</h2>
+              <div class="cardCream-wrapper">
+                <div class="cardCream-text">
+                  <span
+                    class="cardCream-text timeCounter"
+                    data-target="365"
+                  ></span>
+                  <span class="cardCream-text">days</span>
+                </div>
+                <div class="cardCream-text">
+                  <span
+                    class="cardCream-text timeCounter"
+                    data-target="8760"
+                  ></span>
+                  <span class="cardCream-text">hours</span>
+                </div>
+                <div class="cardCream-text">
+                  <span
+                    class="cardCream-text timeCounter"
+                    data-target="525600"
+                  ></span>
+                  <span class="cardCream-text">minutes</span>
+                </div>
+                <div class="cardCream-text">
+                  <span
+                    class="cardCream-text timeCounter"
+                    data-target="31536000"
+                  ></span>
+                  <span class="cardCream-text">seconds</span>
+                </div>
+              </div>
             </div>
-            <h2 class="cardCream-h2">Time In a Year:</h2>
-            <div class="cardCream-wrapper">
-              <div class="cardCream-text">
-                <span
-                  class="cardCream-text timeCounter"
-                  data-target="365"
-                ></span>
-                <span class="cardCream-text">days</span>
-              </div>
-              <div class="cardCream-text">
-                <span
-                  class="cardCream-text timeCounter"
-                  data-target="8760"
-                ></span>
-                <span class="cardCream-text">hours</span>
-              </div>
-              <div class="cardCream-text">
-                <span
-                  class="cardCream-text timeCounter"
-                  data-target="525600"
-                ></span>
-                <span class="cardCream-text">minutes</span>
-              </div>
-              <div class="cardCream-text">
-                <span
-                  class="cardCream-text timeCounter"
-                  data-target="31536000"
-                ></span>
-                <span class="cardCream-text">seconds</span>
-              </div>
-            </div>
-          </div>
-        </div>
       `;
       founderCard.after(html);
+      /* ------------- CARD THE WATCHERS ------------- */
     } else if (el.cardID === 'card-theWatchers') {
       html = document.createElement('div');
       html.innerHTML = `
@@ -165,6 +170,7 @@ const loadAllCards = function (array) {
         </div>
       `;
       founderCard.after(html);
+      /* ------------- CARD AND, TODAY  ------------- */
     } else if (el.cardID === 'card-andToday') {
       html = document.createElement('div');
       html.innerHTML = `
@@ -185,6 +191,7 @@ const loadAllCards = function (array) {
         </div>
       `;
       founderCard.after(html);
+      /* ------------- CARD MIRROR IN THE MIRROR  ------------- */
     } else if (el.cardID === 'card-MITM') {
       html = document.createElement('div');
       html.innerHTML = `

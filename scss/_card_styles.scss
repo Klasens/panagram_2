@@ -40,6 +40,7 @@
   display: inline;
   color: $color-red;
   font-size: $fontSize-smile;
+  position: relative;
 
   &-h2 {
     font-size: $fontSize-smile;
@@ -49,6 +50,13 @@
   &LikeCount {
     color: $color-black;
     font-size: $fontSize-smile;
+  }
+
+  &-pop {
+    font-size: $fontSize-smile;
+    position: absolute;
+    animation: heartPop 2s;
+    scale: 0;
   }
 }
 
@@ -62,8 +70,17 @@
   background-color: $color-chocolate;
 }
 
-.card-square {
-  position: relative;
+.card-square-left {
+  position: absolute;
+  left: 30%;
+  width: 3rem;
+  height: 3rem;
+  background-color: $color-cream;
+  margin: 2rem;
+}
+.card-square-right {
+  position: absolute;
+  right: 30%;
   width: 3rem;
   height: 3rem;
   background-color: $color-cream;
@@ -71,23 +88,12 @@
 }
 
 .card-circle {
-  position: relative;
+  position: absolute;
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
   background-color: $color-cream;
   margin: 2rem;
-}
-
-.square-one {
-  animation: square-one 5s infinite;
-}
-.square-two {
-  animation: square-two 5s infinite;
-}
-
-.circle {
-  animation: circle 5s infinite;
 }
 
 // ----- CARD CREATIVE NONFICTION ----- //

@@ -37,11 +37,18 @@ const heartCount = gridInner.querySelector('#heartCount');
 let i = 0;
 
 // Event Listeners
-heartCard.addEventListener('click', function () {
+heartCard.addEventListener('click', function (e) {
   i++;
   heartCount.innerText = i;
+  let heartCoordinatesX = e.offsetX;
+  let heartCoordinatesY = e.offsetY;
+  let heartPop = document.createElement('div');
+  heartPop.innerHTML = `<i class="card-heart fas fa-heart"></i>`;
+  heartPop.className = 'card-heart-pop';
+  heartPop.style.top = heartCoordinatesY + 'px';
+  heartPop.style.left = heartCoordinatesX + 'px';
+  heartCard.appendChild(heartPop);
 });
-
 /* ------------------- Time in a Year Card ------------------ */
 
 // Selectors
