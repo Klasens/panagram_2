@@ -20,6 +20,9 @@
   @include respond(break-1600) {
     width: 75%;
   }
+  @include respond(break-1000) {
+    width: 90%;
+  }
 }
 
 .grid-inner {
