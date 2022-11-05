@@ -16,6 +16,9 @@
   @include respond(break-1000) {
     font-size: 7rem;
   }
+  @include respond(break-850) {
+    font-size: 5rem;
+  }
 }
 
 .card_header-wrapper {
