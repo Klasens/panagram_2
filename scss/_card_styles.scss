@@ -45,6 +45,7 @@
   &-h2 {
     font-size: $fontSize-smile;
     font-weight: $fontWeight--h2;
+    user-select: none;
   }
 
   &LikeCount {
@@ -116,7 +117,7 @@
 
 // ----- CARD DESIGN LINES ----- //
 .borderColorOrange {
-  border: 1px solid $color-orange;
+  border: 1px solid $color-orange-opaque;
 }
 .borderColorYellow {
   border: 1px solid $color-yellow;
