@@ -18,6 +18,9 @@ const cardsArrayOfObjects = [
   { cardID: 'card-theWatchers' },
   { cardID: 'card-MITM' },
   { cardID: 'card-andToday' },
+  { cardID: 'card-baysideRecovery' },
+  { cardID: 'card-samBodhiJazz' },
+
   // { cardID: 'card-form' },
   // { cardID: 'card-form' },
   // { cardID: 'card-form' },
@@ -46,7 +49,6 @@ const loadAllCards = function (array) {
     console.log(Object.keys(el));
     /* ------------- CARD SMILE ------------- */
     if (el.cardID === 'card-smile') {
-      console.log('test');
       html = document.createElement('div');
       html.innerHTML = `
         <div class="card_style2 gridCard-universal" id="cardHeart">
@@ -105,6 +107,7 @@ const loadAllCards = function (array) {
               class="card_style4-contentContainer contentCard-universal"
               id="timeInaYear"
             >
+              <span class='cardCream-tag cardCream-tag--timeInYear'>Widget</span>
               <div class="card-shapeContainer">
                 <div class="card-square-left square-one"></div>
                 <div class="card-square-left square-three"></div>
@@ -212,9 +215,62 @@ const loadAllCards = function (array) {
         </div>
       `;
       founderCard.after(html);
+      /* ------------- CARD SAM BODHI JAZZ ------------- */
+    } else if (el.cardID === 'card-samBodhiJazz') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class="card_style7 gridCard-universal">
+          <div class="card_style7-contentContainer contentCard-universal">
+            <span class="cardCream-tag cardCream-tag--freelance">
+              Freelance
+            </span>
+            <div class="card-iconContainer">
+              <img
+                class="card-icon"
+                src="./img/piano.png"
+                alt="piano-image https://iconscout.com/"
+              />
+            </div>
+            <h2 class="cardCream-h2">Sam Bodhi Jazz</h2>
+            <p class="cardCream-text">Website for a local jazz musician...</p>
+            <button class="cardCream-btn">View</button>
+          </div>
+        </div>
+      `;
+      founderCard.after(html);
+      /* ------------- CARD BAYSIDE RECOVERY ------------- */
+    } else if (el.cardID === 'card-baysideRecovery') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class="card_style7 gridCard-universal">
+          <div class="card_style7-contentContainer contentCard-universal">
+            <span class="cardCream-tag cardCream-tag--freelance">
+              Freelance
+            </span>
+            <div class="card-iconContainer">
+              <img
+                class="card-icon"
+                src="./img/boat.png"
+                alt="piano-image https://iconscout.com/"
+              />
+            </div>
+            <h2 class="cardCream-h2">Bayside Recovery</h2>
+            <p class="cardCream-text">
+              Website for a local marine recovery service...
+            </p>
+            <button class="cardCream-btn">View</button>
+          </div>
+        </div>
+      `;
+      founderCard.after(html);
     }
   }
 };
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
+
+// const masonryGrid = document.querySelector('.grid-inner');
+// const msnry = new Masonry(masonryGrid, {
+//   itemSelector: '.gridCard-universal',
+// });

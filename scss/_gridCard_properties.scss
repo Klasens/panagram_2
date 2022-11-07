@@ -102,6 +102,18 @@
   width: 85%;
   @include center_flex_column;
 }
+
+/* ---------- STYLE 7 ---------- */
+.card_style7 {
+  position: relative;
+  background-color: $color-cream;
+  @include center_flex_column;
+}
+
+.card_style7-contentContainer {
+  width: 85%;
+  @include center_flex_column;
+}
 /* ---------- FOOTER ---------- */
 .card_footer {
   grid-column: 1 / 4;

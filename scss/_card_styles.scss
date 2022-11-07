@@ -96,10 +96,25 @@
   margin: 2rem;
 }
 
+// ----- CARD FREELANCE ----- //
+.card-iconContainer {
+  @include center_flex_row;
+  height: 10rem;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-icon {
+  width: 10rem;
+  height: auto;
+}
+
 // ----- CARD CREATIVE NONFICTION ----- //
 
 // ----- CARD FICTION ----- //
 
+// ----- CARD DESIGN LINES ----- //
 .borderColorOrange {
   border: 1px solid $color-orange;
 }
@@ -108,6 +123,9 @@
 }
 .borderColorGreen {
   border: 1px solid $color-light-green;
+}
+.borderColorBlue {
+  border: 1px solid $color-blue;
 }
 .designLine {
   &-top {

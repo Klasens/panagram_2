@@ -46,6 +46,9 @@
   width: 50%;
   padding-left: 1rem;
   border-left: 1px solid $color-black;
+  @include respond(break-1000) {
+    width: 80%;
+  }
 }
 
 .card_header-btn--wrapper {
