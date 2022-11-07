@@ -8,12 +8,13 @@ const gridInner = document.querySelector('.grid-inner');
 const cardHeader = document.querySelector('.card_header');
 const headerBtn = document.querySelector('.card_header-btn');
 const cardFooter = document.querySelector('.card_footer');
-const founderCard = document.querySelector('.card_style1');
-
+const founderCard = document.querySelector('#cardFounder');
+const formCard = document.querySelector('#cardForm');
+const smileCard = document.querySelector('.card_style2');
 // Cards Array
 const cardsArrayOfObjects = [
-  { cardID: 'card-smile' },
-  { cardID: 'card-form' },
+  // { cardID: 'card-smile' },
+  // { cardID: 'card-form' },
   { cardID: 'card-shapeContainer' },
   { cardID: 'card-theWatchers' },
   { cardID: 'card-MITM' },
@@ -65,8 +66,7 @@ const loadAllCards = function (array) {
       /* ------------- CARD FORM ------------- */
     } else if (el.cardID === 'card-form') {
       html = document.createElement(`div`);
-      html.innerHTML = `
-      
+      html.innerHTML = `      
       <div class='card_style3 gridCard-universal'>
         <div class='card_style3-contentContainer contentCard-universal'>
           <span class='cardCream-tag cardCream-tag--form'>Form</span>
@@ -151,7 +151,7 @@ const loadAllCards = function (array) {
               </div>
             </div>
       `;
-      founderCard.after(html);
+      formCard.after(html);
       /* ------------- CARD THE WATCHERS ------------- */
     } else if (el.cardID === 'card-theWatchers') {
       html = document.createElement('div');
@@ -193,7 +193,7 @@ const loadAllCards = function (array) {
           </div>
         </div>
       `;
-      founderCard.after(html);
+      smileCard.after(html);
       /* ------------- CARD MIRROR IN THE MIRROR  ------------- */
     } else if (el.cardID === 'card-MITM') {
       html = document.createElement('div');
@@ -214,7 +214,7 @@ const loadAllCards = function (array) {
           </div>
         </div>
       `;
-      founderCard.after(html);
+      formCard.after(html);
       /* ------------- CARD SAM BODHI JAZZ ------------- */
     } else if (el.cardID === 'card-samBodhiJazz') {
       html = document.createElement('div');
@@ -262,7 +262,7 @@ const loadAllCards = function (array) {
           </div>
         </div>
       `;
-      founderCard.after(html);
+      smileCard.after(html);
     }
   }
 };

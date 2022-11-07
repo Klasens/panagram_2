@@ -69,9 +69,9 @@ function increment() {
       const c = +counter.innerText;
 
       const shortIncrement = target / 400;
-      const mediumIncrement = target / 800;
-      const longIncrement = target / 1600;
-      const extraLongIncrement = target / 3200;
+      const mediumIncrement = target / 700;
+      const longIncrement = target / 900;
+      const extraLongIncrement = target / 1000;
 
       if (c < target && target < 1000) {
         counter.innerText = `${Math.ceil(c + shortIncrement)}`;

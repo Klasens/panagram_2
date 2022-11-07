@@ -58,20 +58,59 @@
         </div>
       </div>
       <div class="grid-inner">
-        <div class="card_style1 gridCard-universal">
-          <div class="designLine-right borderColorOrange"></div>
-          <div class="designLine-left borderColorOrange"></div>
-          <div class="card_style1-contentContainer contentCard-universal">
-            <span class="cardChocolate-tag cardChocolate-tag--founder">
-              Portfolio Founder
-            </span>
-            <h2 class="cardChocolate-h2">Robert Klasen</h2>
-            <p class="cardChocolate-text">
-              Robert is the founder of the Panagram.work &mdash; Bob is based
-              out of Green Bay, WI.
-            </p>
-            <btn class="cardChocolate-btn">Contact</btn>
+        <div class="col1">
+          <div class="card_style1 gridCard-universal" id="cardFounder">
+            <div class="designLine-right borderColorOrange"></div>
+            <div class="designLine-left borderColorOrange"></div>
+            <div class="card_style1-contentContainer contentCard-universal">
+              <span class="cardChocolate-tag cardChocolate-tag--founder">
+                Portfolio Founder
+              </span>
+              <h2 class="cardChocolate-h2">Robert Klasen</h2>
+              <p class="cardChocolate-text">
+                Robert is the founder of the Panagram.work &mdash; Bob is based
+                out of Green Bay, WI.
+              </p>
+              <btn class="cardChocolate-btn">Contact</btn>
+            </div>
           </div>
+        </div>
+        <div class="col2">
+          <div class="card_style2 gridCard-universal" id="cardHeart">
+            <div class="card_style2-contentContainer contentCard-universal">
+              <h2 class="card-heart-h2">
+                :) Click and Smile
+                <i class="card-heart fas fa-heart"></i>
+                <span class="card-heartLikeCount" id="heartCount">0</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col3">
+          <div class="card_style3 gridCard-universal" id="cardForm">
+            <div class="card_style3-contentContainer contentCard-universal">
+              <span class="cardCream-tag cardCream-tag--form">Form</span>
+              <h2 class="cardCream-h2">Contact Me</h2>
+              <form action="" class="card-form">
+                <label class="card-form--label" for="fullName">Name</label>
+                <input
+                  class="card-form--inputName"
+                  type="text"
+                  name="fullName"
+                />
+                <label class="card-form--label" for="email">Email</label>
+                <input class="card-form--email" type="text" name="email" />
+                <label class="card-form--label" for="message">Message</label>
+                <textarea
+                  class="card-form--inputMessage"
+                  type="text"
+                  name="message"
+                ></textarea>
+              </form>
+              <button class="cardCream-btn">Submit</button>
+            </div>
+          </div>
+          ;
         </div>
       </div>
       <div class="card_footer">
