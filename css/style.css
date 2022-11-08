@@ -696,6 +696,7 @@ a {
 .gridCard-universal {
   border-radius: 15px;
   overflow: hidden;
+  transform: translateY(50%);
   transition: all 0.3s; }
 
 .contentCard-universal > * {
