@@ -48,6 +48,7 @@ heartCard.addEventListener('click', function (e) {
   heartPop.style.top = heartCoordinatesY + 'px';
   heartPop.style.left = heartCoordinatesX + 'px';
   heartCard.appendChild(heartPop);
+  console.log(heartCoordinatesX, heartCoordinatesY);
 });
 /* ------------------- Time in a Year Card ------------------ */
 

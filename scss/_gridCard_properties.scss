@@ -36,6 +36,7 @@
 
 /* ---------- STYLE 2 ---------- */
 .card_style2 {
+  position: relative;
   height: 50rem;
   background-color: $color-cream;
   background-image: url(../img/bob_smile.jpg);
@@ -45,7 +46,6 @@
 }
 
 .card_style2-contentContainer {
-  position: relative;
   height: 100%;
 }
 

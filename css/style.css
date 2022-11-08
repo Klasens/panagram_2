@@ -552,6 +552,7 @@ a {
 
 /* ---------- STYLE 2 ---------- */
 .card_style2 {
+  position: relative;
   height: 50rem;
   background-color: #ffd1aa;
   background-image: url(../img/bob_smile.jpg);
@@ -563,7 +564,6 @@ a {
   align-items: center; }
 
 .card_style2-contentContainer {
-  position: relative;
   height: 100%; }
 
 /* ---------- STYLE 3 ---------- */
@@ -796,8 +796,7 @@ a {
 .card-heart {
   display: inline;
   color: #fc3b3b;
-  font-size: 3rem;
-  position: relative; }
+  font-size: 3rem; }
   .card-heart-h2 {
     font-size: 3rem;
     font-weight: 300;
