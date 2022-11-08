@@ -659,6 +659,21 @@ a {
   justify-content: center;
   align-items: center; }
 
+/* ---------- STYLE 8 ---------- */
+.card_style8 {
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_style8-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 /* ---------- FOOTER ---------- */
 .card_footer {
   grid-column: 1 / 4;
@@ -681,7 +696,6 @@ a {
 .gridCard-universal {
   border-radius: 15px;
   overflow: hidden;
-  transform: translateY(50%);
   transition: all 0.3s; }
 
 .contentCard-universal > * {
@@ -737,6 +751,9 @@ a {
     background-color: #73b0fb; }
   .cardCream-tag--timeInYear {
     background-color: #f88585; }
+  .cardCream-tag--app {
+    background-color: #0000ee;
+    color: white; }
 
 .cardCream-h2 {
   font-size: 3rem;
@@ -799,6 +816,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
   height: 20rem;
   width: 100%;
   border-radius: 15px;
@@ -841,6 +859,65 @@ a {
 .card-icon {
   width: 10rem;
   height: auto; }
+
+.card-cubeContainer {
+  padding: 2rem 0;
+  perspective: 1000px;
+  perspective-origin: 50% 50%; }
+
+.card-cube {
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  animation: cubeRotate 15s infinite linear;
+  transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; }
+  .card-cube div {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    border: 1px solid white;
+    color: #e9e9e9; }
+  .card-cube--front {
+    background-color: #fc3b3b;
+    transform: translateZ(50px); }
+  .card-cube--back {
+    background-color: #73b0fb;
+    transform: translateZ(-50px) rotateY(180deg); }
+  .card-cube--top {
+    background-color: #113619;
+    transform: rotateX(-270deg) translateY(-50px);
+    transform-origin: top center; }
+  .card-cube--bottom {
+    background-color: #e973fb;
+    transform: rotateX(270deg) translateY(50px);
+    transform-origin: bottom center; }
+  .card-cube--left {
+    background-color: #333333;
+    transform: rotateY(270deg) translateX(-50px);
+    transform-origin: center left; }
+  .card-cube--right {
+    background-color: #fde440;
+    transform: rotateY(-270deg) translateX(50px);
+    transform-origin: top right; }
+
+@keyframes cubeRotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1); }
+  40% {
+    transform: rotateX(360deg) rotateY(360deg) scale(1); }
+  50% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2); }
+  65% {
+    transform: rotateZ(720deg) rotateX(270deg) rotateY(90deg) scale(1); }
+  95% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1); }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1); } }
 
 .borderColorOrange {
   border: 1px solid rgba(255, 145, 0, 0.5); }

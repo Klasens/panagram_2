@@ -21,6 +21,7 @@ const cardsArrayOfObjects = [
   { cardID: 'card-andToday' },
   { cardID: 'card-baysideRecovery' },
   { cardID: 'card-samBodhiJazz' },
+  { cardID: 'card-activityTracker' },
 
   // { cardID: 'card-form' },
   // { cardID: 'card-form' },
@@ -263,14 +264,32 @@ const loadAllCards = function (array) {
         </div>
       `;
       smileCard.after(html);
+    } else if (el.cardID === 'card-activityTracker') {
+      html = document.createElement('div');
+      html.innerHTML = `
+          <div class="card_style8 gridCard-universal">
+            <div class="card_style8-contentContainer contentCard-universal">
+              <span class="cardCream-tag cardCream-tag--app">App</span>
+              <div class="card-cubeContainer">
+                <div class="card-cube">
+                  <div class="card-cube--front"></div>
+                  <div class="card-cube--back"></div>
+                  <div class="card-cube--top"></div>
+                  <div class="card-cube--bottom"></div>
+                  <div class="card-cube--left"></div>
+                  <div class="card-cube--right"></div>
+                </div>
+              </div>
+              <h2 class="cardCream-h2">Activity Tracker</h2>
+              <p class="cardCream-text">An app to keep you on track.</p>
+              <button class="cardCream-btn">Sign Up</button>
+            </div>
+          </div>
+      `;
+      founderCard.after(html);
     }
   }
 };
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
-
-// const masonryGrid = document.querySelector('.grid-inner');
-// const msnry = new Masonry(masonryGrid, {
-//   itemSelector: '.gridCard-universal',
-// });

@@ -6,7 +6,7 @@
 const allCards = document.querySelectorAll('.gridCard-universal');
 
 // Event Listeners
-window.addEventListener('scroll', checkBoxes);
+// window.addEventListener('scroll', checkBoxes);
 
 // Functions
 function checkBoxes() {

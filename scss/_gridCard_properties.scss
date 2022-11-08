@@ -135,6 +135,20 @@
   width: 85%;
   @include center_flex_column;
 }
+
+/* ---------- STYLE 8 ---------- */
+.card_style8 {
+  background-color: $color-cream;
+  @include center_flex_column;
+}
+.card_style8-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ---------- FOOTER ---------- */
 .card_footer {
   grid-column: 1 / 4;
