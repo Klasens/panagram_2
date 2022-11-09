@@ -2,6 +2,26 @@
  *                          CARD_STYLE1 
  *========================================================================**/
 
+/**============================================
+   *     Universal Card Specs -- Chocolate & Cream 
+   *==============================================**/
+
+// -- tag --
+$fontSize--tag: 1.2rem;
+$fontWeight--tag: bold;
+$padding--tag: 1rem 1.5rem;
+$borderRadius--tag: 5px;
+// -- h2 --
+$fontSize--h2: 3rem;
+$fontWeight--h2: 300;
+// -- text --
+$fontSize--text: 1.8rem;
+// -- btn --
+$fontSize--btn: 1.5rem;
+$padding--btn: 0.8rem 1.6rem;
+$borderRadius--btn: 2rem;
+
+// ----- STYLES -----
 .gridCard-universal.show {
   transform: translateY(0);
 }
@@ -15,7 +35,6 @@
 
 // ----- Inner Container
 .contentCard-universal {
-  // height: min-content;
   //All children of main content cards have margin-top 2rem (excludes header and footer cards)
   & > * {
     margin: 2rem 0;
@@ -30,15 +49,6 @@
     font-weight: $fontWeight--tag;
     padding: $padding--tag;
     border-radius: $borderRadius--tag;
-    &--founder {
-      background-color: $color-orange;
-    }
-    &--fiction {
-      background-color: $color-light-green;
-    }
-    &--nonfiction {
-      background-color: $color-yellow;
-    }
   }
 
   &-h2 {
@@ -75,21 +85,6 @@
     font-weight: $fontWeight--tag;
     padding: $padding--tag;
     border-radius: $borderRadius--tag;
-    &--form {
-      background-color: $color-light-purple;
-    }
-    &--header {
-      background-color: $color-orange;
-    }
-    &--freelance {
-      background-color: $color-blue;
-    }
-    &--timeInYear {
-      background-color: $color-light-red;
-    }
-    &--app {
-      background-color: $color-teal;
-    }
   }
 
   &-h2 {
@@ -108,5 +103,33 @@
     border: 2px solid $color-black;
     background-color: $color-cream;
     cursor: pointer;
+  }
+}
+
+// ----- CARD DESIGN LINES ----- //
+.borderColorOrange {
+  border: 1px solid $color-orange-opaque;
+}
+.borderColorYellow {
+  border: 1px solid $color-yellow;
+}
+.borderColorGreen {
+  border: 1px solid $color-light-green;
+}
+.borderColorBlue {
+  border: 1px solid $color-blue;
+}
+.designLine {
+  &-top {
+    @include designLine-top;
+  }
+  &-bottom {
+    @include designLine-bottom;
+  }
+  &-right {
+    @include designLine-right;
+  }
+  &-left {
+    @include designLine-left;
   }
 }

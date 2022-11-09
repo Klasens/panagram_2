@@ -5,110 +5,39 @@
 
 const grid = document.querySelector('.grid');
 const gridInner = document.querySelector('.grid-inner');
-const cardHeader = document.querySelector('.card_header');
-const headerBtn = document.querySelector('.card_header-btn');
-const cardFooter = document.querySelector('.card_footer');
 const founderCard = document.querySelector('#cardFounder');
 const formCard = document.querySelector('#cardForm');
-const smileCard = document.querySelector('.card_style2');
+const smileCard = document.querySelector('.card_smile');
+
 // Cards Array
 const cardsArrayOfObjects = [
-  // { cardID: 'card-smile' },
-  // { cardID: 'card-form' },
-  { cardID: 'card-shapeContainer' },
+  { cardID: 'card-milestone' },
   { cardID: 'card-theWatchers' },
   { cardID: 'card-MITM' },
   { cardID: 'card-andToday' },
   { cardID: 'card-baysideRecovery' },
   { cardID: 'card-samBodhiJazz' },
   { cardID: 'card-activityTracker' },
-
-  // { cardID: 'card-form' },
-  // { cardID: 'card-form' },
-  // { cardID: 'card-form' },
-  // { cardID: 'card-form' },
-  // { cardID: 'card-form' },
-  // { cardID: 'card-form' },
 ];
 
-// Assign each element of an array an ID# property
-const assignIDs = function (array) {
-  const array_IDs = array.slice();
-  for (let i = 0; i < array_IDs.length; i++) {
-    array_IDs[i].id = i + 1;
-  }
-  return array_IDs;
-};
-
 /* --------------------------- DREADFULLY LONG IF STATEMENT --------------------------- */
-//Randomly create HTML for each element in array object
+//Randomly insert HTML for each element in array object
 const loadAllCards = function (array) {
   const arrayCopy = array.slice();
   while (arrayCopy.length) {
     const random = Math.floor(Math.random() * arrayCopy.length);
     const el = arrayCopy.splice(random, 1)[0];
     let html;
-    console.log(Object.keys(el));
-    /* ------------- CARD SMILE ------------- */
-    if (el.cardID === 'card-smile') {
+    /* ------------- CARD MILESTONE ------------- */
+    if (el.cardID === 'card-milestone') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style2 gridCard-universal" id="cardHeart">
-          <div class="card_style2-contentContainer contentCard-universal">
-            <h2 class="card-heart-h2">
-              :) Click and Smile
-              <i class="card-heart fas fa-heart"></i>
-              <span class="card-heartLikeCount" id="heartCount">0</span>
-            </h2>
-          </div>
-        </div>
-  `;
-      founderCard.after(html);
-      /* ------------- CARD FORM ------------- */
-    } else if (el.cardID === 'card-form') {
-      html = document.createElement(`div`);
-      html.innerHTML = `      
-      <div class='card_style3 gridCard-universal'>
-        <div class='card_style3-contentContainer contentCard-universal'>
-          <span class='cardCream-tag cardCream-tag--form'>Form</span>
-          <h2 class='cardCream-h2'>Contact Me</h2>
-          <form action='' class='card-form'>
-            <label class='card-form--label' for='fullName'>
-              Name
-            </label>
-            <input
-              class='card-form--inputName'
-              type='text'
-              name='fullName'
-            />
-            <label class='card-form--label' for='email'>
-              Email
-            </label>
-            <input class='card-form--email' type='text' name='email' />
-            <label class='card-form--label' for='message'>
-              Message
-            </label>
-            <textarea
-              class='card-form--inputMessage'
-              type='text'
-              name='message'
-            ></textarea>
-          </form>
-          <button class='cardCream-btn'>Submit</button>
-        </div>
-      </div>;
-      `;
-      founderCard.after(html);
-      /* ------------- CARD SHAPECONTAINER ------------- */
-    } else if (el.cardID === 'card-shapeContainer') {
-      html = document.createElement('div');
-      html.innerHTML = `
-          <div class="card_style4 gridCard-universal">
+          <div class="card_milestone gridCard-universal">
             <div
-              class="card_style4-contentContainer contentCard-universal"
+              class="card_milestone-contentContainer contentCard-universal"
               id="timeInaYear"
             >
-              <span class='cardCream-tag cardCream-tag--timeInYear'>Widget</span>
+              <span class='cardCream-tag card_milestone-tag'>Widget</span>
               <div class="card-shapeContainer">
                 <div class="card-square-left square-one"></div>
                 <div class="card-square-left square-three"></div>
@@ -157,11 +86,11 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-theWatchers') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style5 gridCard-universal">
+        <div class="card_nonfiction gridCard-universal">
           <div class="designLine-right borderColorYellow"></div>
           <div class="designLine-left borderColorYellow"></div>
-          <div class="card_style5-contentContainer contentCard-universal">
-            <span class="cardChocolate-tag cardChocolate-tag--nonfiction">
+          <div class="card_nonfiction-contentContainer contentCard-universal">
+            <span class="cardChocolate-tag card_nonfiction-tag">
               Creative Non-Fiction
             </span>
             <h2 class="cardChocolate-h2">The Watchers</h2>
@@ -178,11 +107,11 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-andToday') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style5 gridCard-universal">
+        <div class="card_nonfiction gridCard-universal">
           <div class="designLine-right borderColorYellow"></div>
           <div class="designLine-left borderColorYellow"></div>
-          <div class="card_style5-contentContainer contentCard-universal">
-            <span class="cardChocolate-tag cardChocolate-tag--nonfiction">
+          <div class="card_nonfiction-contentContainer contentCard-universal">
+            <span class="cardChocolate-tag card_nonfiction-tag">
               Creative Non-Fiction
             </span>
             <h2 class="cardChocolate-h2">And, Today</h2>
@@ -199,11 +128,11 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-MITM') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style6 gridCard-universal">
+        <div class="card_fiction gridCard-universal">
           <div class="designLine-right borderColorGreen"></div>
           <div class="designLine-left borderColorGreen"></div>
-          <div class="card_style6-contentContainer contentCard-universal">
-            <span class="cardChocolate-tag cardChocolate-tag--fiction">
+          <div class="card_fiction-contentContainer contentCard-universal">
+            <span class="cardChocolate-tag card_fiction-tag">
               Fiction
             </span>
             <h2 class="cardChocolate-h2">Mirror In the Mirror</h2>
@@ -220,9 +149,9 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-samBodhiJazz') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style7 gridCard-universal">
-          <div class="card_style7-contentContainer contentCard-universal">
-            <span class="cardCream-tag cardCream-tag--freelance">
+        <div class="card_freelance gridCard-universal">
+          <div class="card_freelance-contentContainer contentCard-universal">
+            <span class="cardCream-tag card_freelance-tag">
               Freelance
             </span>
             <div class="card-iconContainer">
@@ -243,9 +172,9 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-baysideRecovery') {
       html = document.createElement('div');
       html.innerHTML = `
-        <div class="card_style7 gridCard-universal">
-          <div class="card_style7-contentContainer contentCard-universal">
-            <span class="cardCream-tag cardCream-tag--freelance">
+        <div class="card_freelance gridCard-universal">
+          <div class="card_freelance-contentContainer contentCard-universal">
+            <span class="cardCream-tag card_freelance-tag">
               Freelance
             </span>
             <div class="card-iconContainer">
@@ -267,9 +196,9 @@ const loadAllCards = function (array) {
     } else if (el.cardID === 'card-activityTracker') {
       html = document.createElement('div');
       html.innerHTML = `
-          <div class="card_style8 gridCard-universal">
-            <div class="card_style8-contentContainer contentCard-universal">
-              <span class="cardCream-tag cardCream-tag--app">App</span>
+          <div class="card_app gridCard-universal">
+            <div class="card_app-contentContainer contentCard-universal">
+              <span class="cardCream-tag card_app-tag">App</span>
               <div class="card-cubeContainer">
                 <div class="card-cube">
                   <div class="card-cube--front"></div>
@@ -293,3 +222,12 @@ const loadAllCards = function (array) {
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
+
+// Assign each element of an array an ID# property -- UNUSED
+// const assignIDs = function (array) {
+//   const array_IDs = array.slice();
+//   for (let i = 0; i < array_IDs.length; i++) {
+//     array_IDs[i].id = i + 1;
+//   }
+//   return array_IDs;
+// };

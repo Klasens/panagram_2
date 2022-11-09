@@ -38,35 +38,7 @@
   }
 }
 
-.col1 {
-  height: min-content;
-  & > div:not(:first-child) {
-    margin-top: 4rem;
-  }
-  @include respond(break-1400) {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 4rem;
-  }
-  @include respond(break-1000) {
-    width: 100%;
-  }
-}
-.col2 {
-  height: min-content;
-  & > div:not(:first-child) {
-    margin-top: 4rem;
-  }
-  @include respond(break-1400) {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 4rem;
-  }
-  @include respond(break-1000) {
-    width: 100%;
-  }
-}
-.col3 {
+.col {
   height: min-content;
   & > div:not(:first-child) {
     margin-top: 4rem;

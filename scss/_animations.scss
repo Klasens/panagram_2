@@ -2,8 +2,7 @@
    *              ANIMATIONS 
    *=============================================**/
 
-/* ---------- HEART POP --------- */
-
+/* ---------- CARD SMILE HEART POP --------- */
 @keyframes heartPop {
   from {
     scale: 0;
@@ -14,32 +13,18 @@
     opacity: 0;
   }
 }
-/* ---------- SHAPE CONTAINER --------- */
-.square-one {
-  animation: square-one 6s ease-in-out infinite;
-}
-.square-two {
-  animation: square-two 6s ease-in-out infinite;
-}
-.square-three {
-  animation: square-three 6s ease-in-out infinite;
-}
-.square-four {
-  animation: square-four 6s ease-in-out infinite;
+
+/* ---------- CARD NONFICTION AND FICTION SLIDING LINE --------- */
+@keyframes accentLine {
+  from {
+    -webkit-mask-position: left;
+  }
+  to {
+    -webkit-mask-position: right;
+  }
 }
 
-.circle-one {
-  animation: circle-one 6s ease-in-out infinite;
-}
-.circle-two {
-  animation: circle-two 6s ease-in-out infinite;
-}
-.circle-three {
-  animation: circle-three 6s ease-in-out infinite;
-}
-.circle-four {
-  animation: circle-four 6s ease-in-out infinite;
-}
+/* ---------- CARD MILESTONE SHAPE CONTAINER ANIMATIONS --------- */
 @keyframes square-one {
   40% {
     transform: translate(-9rem, -8rem) rotate(180deg);
@@ -53,7 +38,6 @@
     transform: translate(0%, 0%);
   }
 }
-
 @keyframes square-two {
   40% {
     transform: translate(9rem, 8rem) rotate(360deg);
@@ -80,7 +64,6 @@
     transform: translate(0%, 0%);
   }
 }
-
 @keyframes square-four {
   40% {
     transform: translate(9rem, 8rem) rotate(360deg);
@@ -133,7 +116,6 @@
     transform: translate(0, 0);
   }
 }
-
 @keyframes circle-four {
   40% {
     transform: translate(3rem, 8rem);

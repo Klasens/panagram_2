@@ -2,9 +2,27 @@
  *                          CARD_HEADER 
  *========================================================================**/
 .card_header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 5;
+  background-color: $color-cream;
+  @include center_flex_column;
   border-radius: 15px;
   overflow: hidden;
+  // display: none;
 }
+
+.card_header-contentContainer {
+  height: 90%;
+  width: 85%;
+  //Overwriting justify content from mixin
+  @include center_flex_column;
+  justify-content: space-between;
+}
+
+.card_header-tag {
+  background-color: $color-orange;
+}
+
 .card_header-mainHead {
   font-family: $fontFamily-spaceMono;
   font-size: 17rem;
@@ -76,18 +94,9 @@
   cursor: pointer;
 
   //Animated Line -- Change the percentages to adjust the line thickness
-  animation: lightBar 3s infinite reverse;
+  animation: accentLine 3s infinite reverse;
   mask: linear-gradient(150deg, #fff 50%, rgba(0, 0, 0, 0.5), #fff 55%)
     right/300% 100%;
   -webkit-mask: linear-gradient(150deg, #fff 50%, rgba(0, 0, 0, 0.5), #fff 55%)
     right/300% 100%;
-}
-
-@keyframes lightBar {
-  from {
-    -webkit-mask-position: left;
-  }
-  to {
-    -webkit-mask-position: right;
-  }
 }
