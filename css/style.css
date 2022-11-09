@@ -16,12 +16,6 @@
 /**======================
    *      Links
    *========================**/
-/**============================================
-   *     Universal Card Specs -- Chocolate & Cream 
-   *==============================================**/
-/**======================
-   *     Card Smile 
-   *========================**/
 /**======================
    *     Font List 
    *========================**/
@@ -31,10 +25,16 @@
 /**========================================================================
  *                           Mixins
  *========================================================================**/
+/**======================
+   *     LAYOUT 
+   *========================**/
+/**======================
+   *     UNIVERSAL DESIGN 
+   *========================**/
 /**============================================
    *              ANIMATIONS 
    *=============================================**/
-/* ---------- HEART POP --------- */
+/* ---------- CARD SMILE HEART POP --------- */
 @keyframes heartPop {
   from {
     scale: 0;
@@ -43,31 +43,14 @@
     scale: 2;
     opacity: 0; } }
 
-/* ---------- SHAPE CONTAINER --------- */
-.square-one {
-  animation: square-one 6s ease-in-out infinite; }
+/* ---------- CARD NONFICTION AND FICTION SLIDING LINE --------- */
+@keyframes accentLine {
+  from {
+    -webkit-mask-position: left; }
+  to {
+    -webkit-mask-position: right; } }
 
-.square-two {
-  animation: square-two 6s ease-in-out infinite; }
-
-.square-three {
-  animation: square-three 6s ease-in-out infinite; }
-
-.square-four {
-  animation: square-four 6s ease-in-out infinite; }
-
-.circle-one {
-  animation: circle-one 6s ease-in-out infinite; }
-
-.circle-two {
-  animation: circle-two 6s ease-in-out infinite; }
-
-.circle-three {
-  animation: circle-three 6s ease-in-out infinite; }
-
-.circle-four {
-  animation: circle-four 6s ease-in-out infinite; }
-
+/* ---------- CARD MILESTONE SHAPE CONTAINER ANIMATIONS --------- */
 @keyframes square-one {
   40% {
     transform: translate(-9rem, -8rem) rotate(180deg); }
@@ -154,7 +137,8 @@ html {
 
 a {
   color: #0000ee;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 /**========================================================================
  *                          MAIN GRID 
@@ -303,7 +287,7 @@ a {
     .grid-inner {
       grid-template-columns: 1fr; } }
 
-.col1 {
+.col {
   height: min-content;
   /**============================================
    *             Mobile Small - 600
@@ -361,335 +345,23 @@ a {
    *                Telvision/Projector > 1800
    @include respond(break-1800) {}
    *=============================================**/ }
-  .col1 > div:not(:first-child) {
+  .col > div:not(:first-child) {
     margin-top: 4rem; }
   @media (max-width: 87.5em) {
-    .col1 {
+    .col {
       width: 75%;
       margin: 0 auto;
       margin-top: 4rem; } }
   @media (max-width: 62.5em) {
-    .col1 {
+    .col {
       width: 100%; } }
-
-.col2 {
-  height: min-content;
-  /**============================================
-   *             Mobile Small - 600
-@include respond(break-600) {}
-   *=============================================**/
-  /**============================================
-   *             Mobile Large - 850
-@include respond(break-850) {}
-   *=============================================**/
-  /**============================================
-   *                Tablet - 1000
-@include respond(break-1000) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Small - 1200
-   @include respond(break-1200) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1400) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1600) {}
-   *=============================================**/
-  /**============================================
-   *                Telvision/Projector > 1800
-   @include respond(break-1800) {}
-   *=============================================**/
-  /**============================================
-   *             Mobile Small - 600
-@include respond(break-600) {}
-   *=============================================**/
-  /**============================================
-   *             Mobile Large - 850
-@include respond(break-850) {}
-   *=============================================**/
-  /**============================================
-   *                Tablet - 1000
-@include respond(break-1000) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Small - 1200
-   @include respond(break-1200) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1400) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1600) {}
-   *=============================================**/
-  /**============================================
-   *                Telvision/Projector > 1800
-   @include respond(break-1800) {}
-   *=============================================**/ }
-  .col2 > div:not(:first-child) {
-    margin-top: 4rem; }
-  @media (max-width: 87.5em) {
-    .col2 {
-      width: 75%;
-      margin: 0 auto;
-      margin-top: 4rem; } }
-  @media (max-width: 62.5em) {
-    .col2 {
-      width: 100%; } }
-
-.col3 {
-  height: min-content;
-  /**============================================
-   *             Mobile Small - 600
-@include respond(break-600) {}
-   *=============================================**/
-  /**============================================
-   *             Mobile Large - 850
-@include respond(break-850) {}
-   *=============================================**/
-  /**============================================
-   *                Tablet - 1000
-@include respond(break-1000) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Small - 1200
-   @include respond(break-1200) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1400) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1600) {}
-   *=============================================**/
-  /**============================================
-   *                Telvision/Projector > 1800
-   @include respond(break-1800) {}
-   *=============================================**/
-  /**============================================
-   *             Mobile Small - 600
-@include respond(break-600) {}
-   *=============================================**/
-  /**============================================
-   *             Mobile Large - 850
-@include respond(break-850) {}
-   *=============================================**/
-  /**============================================
-   *                Tablet - 1000
-@include respond(break-1000) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Small - 1200
-   @include respond(break-1200) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1400) {}
-   *=============================================**/
-  /**============================================
-   *                Monitor Medium - 1400
-   @include respond(break-1600) {}
-   *=============================================**/
-  /**============================================
-   *                Telvision/Projector > 1800
-   @include respond(break-1800) {}
-   *=============================================**/ }
-  .col3 > div:not(:first-child) {
-    margin-top: 4rem; }
-  @media (max-width: 87.5em) {
-    .col3 {
-      width: 75%;
-      margin: 0 auto;
-      margin-top: 4rem; } }
-  @media (max-width: 62.5em) {
-    .col3 {
-      width: 100%; } }
-
-/**========================================================================
- *                          GRID & CONTAINER PROPERTIES
- *========================================================================**/
-/* ---------- GRID PROPERTIES ---------- */
-/* ---------- HEADER ---------- */
-.card_header {
-  grid-column: 1 / 4;
-  grid-row: 1 / 5;
-  background-color: #ffd1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_header-contentContainer {
-  height: 90%;
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between; }
-
-/* ---------- STYLE 1 ---------- */
-.card_style1 {
-  height: min-content;
-  position: relative;
-  background-color: rgba(47, 193, 250, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_style1-contentContainer {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-/* ---------- STYLE 2 ---------- */
-.card_style2 {
-  position: relative;
-  height: 50rem;
-  background-color: #ffd1aa;
-  background-image: url(../img/bob_smile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_style2-contentContainer {
-  height: 100%; }
-
-/* ---------- STYLE 3 ---------- */
-.card_style3 {
-  height: min-content;
-  background-color: #ffd1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_style3-contentContainer {
-  width: 85%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-/* ---------- STYLE 4 ---------- */
-.card_style4 {
-  cursor: pointer;
-  background-color: #ffd1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_style4-contentContainer {
-  width: 85%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-/* ---------- STYLE 5 ---------- */
-.card_style5 {
-  position: relative;
-  height: min-content;
-  background-color: #544c49;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: lightBar2 6s infinite reverse;
-  mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%;
-  -webkit-mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%; }
-
-@keyframes lightBar2 {
-  from {
-    -webkit-mask-position: left; }
-  to {
-    -webkit-mask-position: right; } }
-
-.card_style5-contentContainer {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-/* ---------- STYLE 6 ---------- */
-.card_style6 {
-  position: relative;
-  background-color: #544c49;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: lightBar2 6s infinite reverse;
-  mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%;
-  -webkit-mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%; }
-
-.card_style6-contentContainer {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-/* ---------- STYLE 7 ---------- */
-.card_style7 {
-  position: relative;
-  background-color: #ffd1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_style7-contentContainer {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-/* ---------- STYLE 8 ---------- */
-.card_style8 {
-  background-color: #ffd1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_style8-contentContainer {
-  width: 85%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-/* ---------- FOOTER ---------- */
-.card_footer {
-  grid-column: 1 / 4;
-  background-color: #ffd1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.card_footer-contentContainer {
-  width: 85%;
-  font-size: 1.9rem; }
 
 /**========================================================================
  *                          CARD_STYLE1 
  *========================================================================**/
+/**============================================
+   *     Universal Card Specs -- Chocolate & Cream 
+   *==============================================**/
 .gridCard-universal.show {
   transform: translateY(0); }
 
@@ -707,12 +379,6 @@ a {
   font-weight: bold;
   padding: 1rem 1.5rem;
   border-radius: 5px; }
-  .cardChocolate-tag--founder {
-    background-color: #ff9100; }
-  .cardChocolate-tag--fiction {
-    background-color: #56d270; }
-  .cardChocolate-tag--nonfiction {
-    background-color: #fde440; }
 
 .cardChocolate-h2 {
   font-size: 3rem;
@@ -744,16 +410,6 @@ a {
   font-weight: bold;
   padding: 1rem 1.5rem;
   border-radius: 5px; }
-  .cardCream-tag--form {
-    background-color: #d8aefd; }
-  .cardCream-tag--header {
-    background-color: #ff9100; }
-  .cardCream-tag--freelance {
-    background-color: #73b0fb; }
-  .cardCream-tag--timeInYear {
-    background-color: #f88585; }
-  .cardCream-tag--app {
-    background-color: #5fffea; }
 
 .cardCream-h2 {
   font-size: 3rem;
@@ -770,159 +426,6 @@ a {
   border: 2px solid #333333;
   background-color: #ffd1aa;
   cursor: pointer; }
-
-/**========================================================================
- *                          INDIVIDUAL CARD STYLES
- *========================================================================**/
-.card-founderIcon {
-  width: 4rem;
-  cursor: pointer;
-  margin: 0 1rem; }
-
-.card-form {
-  width: 100%; }
-  .card-form > input {
-    margin-bottom: 1rem; }
-  .card-form--label {
-    display: block;
-    font-size: 1.8rem; }
-  .card-form--inputName {
-    border: 1px solid #433e3c;
-    height: 2.5rem;
-    width: 90%; }
-  .card-form--email {
-    border: 1px solid #433e3c;
-    height: 2.5rem;
-    width: 90%; }
-  .card-form--inputMessage {
-    border: 1px solid #433e3c;
-    height: 7rem;
-    width: 90%; }
-
-.card-heart {
-  display: inline;
-  color: #fc3b3b;
-  font-size: 3rem; }
-  .card-heart-h2 {
-    font-size: 3rem;
-    font-weight: 300;
-    user-select: none; }
-  .card-heartLikeCount {
-    color: #333333;
-    font-size: 3rem; }
-  .card-heart-pop {
-    font-size: 3rem;
-    position: absolute;
-    animation: heartPop 2s;
-    scale: 0; }
-
-.card-shapeContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 20rem;
-  width: 100%;
-  border-radius: 15px;
-  background-color: #433e3c; }
-
-.card-square-left {
-  position: absolute;
-  left: 30%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #ffd1aa;
-  margin: 2rem; }
-
-.card-square-right {
-  position: absolute;
-  right: 30%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #ffd1aa;
-  margin: 2rem; }
-
-.card-circle {
-  position: absolute;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #ffd1aa;
-  margin: 2rem; }
-
-.card-iconContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 10rem;
-  width: 100%;
-  border-radius: 15px;
-  overflow: hidden; }
-
-.card-icon {
-  width: 10rem;
-  height: auto; }
-
-.card-cubeContainer {
-  padding: 2rem 0;
-  perspective: 1000px;
-  perspective-origin: 50% 50%; }
-
-.card-cube {
-  position: relative;
-  height: 10rem;
-  width: 10rem;
-  animation: cubeRotate 15s infinite linear;
-  transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d; }
-  .card-cube div {
-    position: absolute;
-    box-sizing: border-box;
-    padding: 1rem;
-    height: 100%;
-    width: 100%;
-    opacity: 0.9;
-    border: 1px solid white;
-    color: #e9e9e9; }
-  .card-cube--front {
-    background-color: #fc3b3b;
-    transform: translateZ(50px); }
-  .card-cube--back {
-    background-color: #73b0fb;
-    transform: translateZ(-50px) rotateY(180deg); }
-  .card-cube--top {
-    background-color: #113619;
-    transform: rotateX(-270deg) translateY(-50px);
-    transform-origin: top center; }
-  .card-cube--bottom {
-    background-color: #e973fb;
-    transform: rotateX(270deg) translateY(50px);
-    transform-origin: bottom center; }
-  .card-cube--left {
-    background-color: #333333;
-    transform: rotateY(270deg) translateX(-50px);
-    transform-origin: center left; }
-  .card-cube--right {
-    background-color: #fde440;
-    transform: rotateY(-270deg) translateX(50px);
-    transform-origin: top right; }
-
-@keyframes cubeRotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1); }
-  40% {
-    transform: rotateX(360deg) rotateY(360deg) scale(1); }
-  50% {
-    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2); }
-  65% {
-    transform: rotateZ(720deg) rotateX(270deg) rotateY(90deg) scale(1); }
-  95% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1); }
-  100% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1); } }
 
 .borderColorOrange {
   border: 1px solid rgba(255, 145, 0, 0.5); }
@@ -968,8 +471,27 @@ a {
  *                          CARD_HEADER 
  *========================================================================**/
 .card_header {
+  grid-column: 1 / 4;
+  grid-row: 1 / 5;
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   overflow: hidden; }
+
+.card_header-contentContainer {
+  height: 90%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between; }
+
+.card_header-tag {
+  background-color: #ff9100; }
 
 .card_header-mainHead {
   font-family: "Space Mono", monospace;
@@ -1204,18 +726,369 @@ a {
   color: #ffd1aa;
   padding: 1rem 2.2rem;
   cursor: pointer;
-  animation: lightBar 3s infinite reverse;
+  animation: accentLine 3s infinite reverse;
   mask: linear-gradient(150deg, #fff 50%, rgba(0, 0, 0, 0.5), #fff 55%) right/300% 100%;
   -webkit-mask: linear-gradient(150deg, #fff 50%, rgba(0, 0, 0, 0.5), #fff 55%) right/300% 100%; }
-
-@keyframes lightBar {
-  from {
-    -webkit-mask-position: left; }
-  to {
-    -webkit-mask-position: right; } }
 
 /**========================================================================
  *                          CARD_FOOTER 
  *========================================================================**/
 .card_footer {
+  grid-column: 1 / 4;
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px; }
+
+.card_footer-contentContainer {
+  width: 85%;
+  font-size: 1.9rem; }
+
+/**========================================================================
+ *                          CARD FOUNDER
+ *========================================================================**/
+.card_founder {
+  height: min-content;
+  position: relative;
+  background-color: rgba(47, 193, 250, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_founder-contentContainer {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_founder-tag {
+  background-color: #ff9100; }
+
+.card_founder-icon {
+  width: 4rem;
+  cursor: pointer;
+  margin: 0 1rem; }
+
+/**========================================================================
+ *                          CARD SMILE
+ *========================================================================**/
+.card_smile {
+  position: relative;
+  height: 50rem;
+  background-color: #ffd1aa;
+  background-image: url(../img/bob_smile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_smile-contentContainer {
+  height: 100%; }
+
+.card-heart {
+  display: inline;
+  color: #fc3b3b;
+  font-size: 3rem; }
+  .card-heart-h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    user-select: none; }
+  .card-heartLikeCount {
+    color: #333333;
+    font-size: 3rem; }
+  .card-heart-pop {
+    font-size: 3rem;
+    position: absolute;
+    animation: heartPop 2s;
+    scale: 0; }
+
+/**========================================================================
+ *                          CARD FORM
+ *========================================================================**/
+.card_form {
+  height: min-content;
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_form-tag {
+  background-color: #d8aefd; }
+
+.card_form-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.card-form {
+  width: 100%; }
+  .card-form > input {
+    margin-bottom: 1rem; }
+  .card-form--label {
+    display: block;
+    font-size: 1.8rem; }
+  .card-form--inputName {
+    border: 1px solid #433e3c;
+    height: 2.5rem;
+    width: 90%; }
+  .card-form--email {
+    border: 1px solid #433e3c;
+    height: 2.5rem;
+    width: 90%; }
+  .card-form--inputMessage {
+    border: 1px solid #433e3c;
+    height: 7rem;
+    width: 90%; }
+
+/**========================================================================
+ *                          CARD MILESTONE
+ *========================================================================**/
+.card_milestone {
+  cursor: pointer;
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_milestone-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.card_milestone-tag {
+  background-color: #f88585; }
+
+/* ---------- SHAPE CONTAINER --------- */
+.card-shapeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 20rem;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #433e3c; }
+
+.card-square-left {
+  position: absolute;
+  left: 30%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffd1aa;
+  margin: 2rem; }
+
+.card-square-right {
+  position: absolute;
+  right: 30%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffd1aa;
+  margin: 2rem; }
+
+.card-circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffd1aa;
+  margin: 2rem; }
+
+.square-one {
+  animation: square-one 6s ease-in-out infinite; }
+
+.square-two {
+  animation: square-two 6s ease-in-out infinite; }
+
+.square-three {
+  animation: square-three 6s ease-in-out infinite; }
+
+.square-four {
+  animation: square-four 6s ease-in-out infinite; }
+
+.circle-one {
+  animation: circle-one 6s ease-in-out infinite; }
+
+.circle-two {
+  animation: circle-two 6s ease-in-out infinite; }
+
+.circle-three {
+  animation: circle-three 6s ease-in-out infinite; }
+
+.circle-four {
+  animation: circle-four 6s ease-in-out infinite; }
+
+/**========================================================================
+ *                          CARD NONFICTION
+ *========================================================================**/
+.card_nonfiction {
+  position: relative;
+  height: min-content;
+  background-color: #544c49;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: accentLine 6s infinite reverse;
+  mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%;
+  -webkit-mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%; }
+
+.card_nonfiction-contentContainer {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_nonfiction-tag {
+  background-color: #fde440; }
+
+/**========================================================================
+ *                          CARD FICTION
+ *========================================================================**/
+.card_fiction {
+  position: relative;
+  background-color: #544c49;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: accentLine 6s infinite reverse;
+  mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%;
+  -webkit-mask: linear-gradient(90deg, #fff 50%, rgba(0, 0, 0, 0.8), #fff 55%) right/300% 100%; }
+
+.card_fiction-contentContainer {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_fiction-tag {
+  background-color: #56d270; }
+
+/**========================================================================
+ *                          CARD FREELANCE
+ *========================================================================**/
+.card_freelance {
+  position: relative;
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_freelance-tag {
+  background-color: #73b0fb; }
+
+.card_freelance-contentContainer {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card-iconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden; }
+
+.card-icon {
+  width: 10rem;
+  height: auto; }
+
+/**========================================================================
+ *                          CARD APP
+ *========================================================================**/
+.card_app {
+  background-color: #ffd1aa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_app-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.card_app-tag {
+  background-color: #5fffea; }
+
+.card-cubeContainer {
+  padding: 2rem 0;
+  perspective: 1000px;
+  perspective-origin: 50% 50%; }
+
+.card-cube {
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  animation: cubeRotate 15s infinite linear;
+  transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; }
+  .card-cube div {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    border: 1px solid white;
+    color: #e9e9e9; }
+  .card-cube--front {
+    background-color: #fc3b3b;
+    transform: translateZ(50px); }
+  .card-cube--back {
+    background-color: #73b0fb;
+    transform: translateZ(-50px) rotateY(180deg); }
+  .card-cube--top {
+    background-color: #113619;
+    transform: rotateX(-270deg) translateY(-50px);
+    transform-origin: top center; }
+  .card-cube--bottom {
+    background-color: #e973fb;
+    transform: rotateX(270deg) translateY(50px);
+    transform-origin: bottom center; }
+  .card-cube--left {
+    background-color: #333333;
+    transform: rotateY(270deg) translateX(-50px);
+    transform-origin: center left; }
+  .card-cube--right {
+    background-color: #fde440;
+    transform: rotateY(-270deg) translateX(50px);
+    transform-origin: top right; }
+
+@keyframes cubeRotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1); }
+  40% {
+    transform: rotateX(360deg) rotateY(360deg) scale(1); }
+  50% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2); }
+  65% {
+    transform: rotateZ(720deg) rotateX(270deg) rotateY(90deg) scale(1); }
+  95% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1); }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1); } }
