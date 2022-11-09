@@ -119,33 +119,33 @@ const loadAllCards = function (array) {
                 <div class="card-square-right square-two"></div>
                 <div class="card-square-right square-four"></div>
               </div>
-              <h2 class="cardCream-h2">Time In a Year:</h2>
+              <h2 class="cardCream-h2">Latest Milestone: <br> Age &mdash; 30</h2>
               <div class="cardCream-wrapper">
                 <div class="cardCream-text">
                   <span
                     class="cardCream-text timeCounter"
-                    data-target="365"
+                    data-target="10950"
                   ></span>
                   <span class="cardCream-text">days</span>
                 </div>
                 <div class="cardCream-text">
                   <span
                     class="cardCream-text timeCounter"
-                    data-target="8760"
+                    data-target="262800"
                   ></span>
                   <span class="cardCream-text">hours</span>
                 </div>
                 <div class="cardCream-text">
                   <span
                     class="cardCream-text timeCounter"
-                    data-target="525600"
+                    data-target="15768000"
                   ></span>
                   <span class="cardCream-text">minutes</span>
                 </div>
                 <div class="cardCream-text">
                   <span
                     class="cardCream-text timeCounter"
-                    data-target="31536000"
+                    data-target="946080000"
                   ></span>
                   <span class="cardCream-text">seconds</span>
                 </div>
@@ -233,7 +233,7 @@ const loadAllCards = function (array) {
               />
             </div>
             <h2 class="cardCream-h2">Sam Bodhi Jazz</h2>
-            <p class="cardCream-text">Website for a local jazz musician...</p>
+            <p class="cardCream-text">Website &mdash; local jazz musician</p>
             <button class="cardCream-btn">View</button>
           </div>
         </div>
@@ -257,7 +257,7 @@ const loadAllCards = function (array) {
             </div>
             <h2 class="cardCream-h2">Bayside Recovery</h2>
             <p class="cardCream-text">
-              Website for a local marine recovery service...
+              Website &mdash; local marine recovery 
             </p>
             <button class="cardCream-btn">View</button>
           </div>

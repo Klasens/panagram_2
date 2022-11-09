@@ -88,14 +88,14 @@
       background-color: $color-light-red;
     }
     &--app {
-      background-color: $color-link;
-      color: $color-white;
+      background-color: $color-teal;
     }
   }
 
   &-h2 {
     font-size: $fontSize--h2;
     font-weight: $fontWeight--h2;
+    text-align: center;
   }
   &-text {
     font-size: $fontSize--text;

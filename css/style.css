@@ -753,12 +753,12 @@ a {
   .cardCream-tag--timeInYear {
     background-color: #f88585; }
   .cardCream-tag--app {
-    background-color: #0000ee;
-    color: white; }
+    background-color: #5fffea; }
 
 .cardCream-h2 {
   font-size: 3rem;
-  font-weight: 300; }
+  font-weight: 300;
+  text-align: center; }
 
 .cardCream-text {
   font-size: 1.8rem; }
@@ -774,6 +774,11 @@ a {
 /**========================================================================
  *                          INDIVIDUAL CARD STYLES
  *========================================================================**/
+.card-founderIcon {
+  width: 4rem;
+  cursor: pointer;
+  margin: 0 1rem; }
+
 .card-form {
   width: 100%; }
   .card-form > input {
@@ -1144,7 +1149,7 @@ a {
       font-size: 3rem; } }
 
 .card_header-text {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   width: 50%;
   padding-left: 1rem;
   border-left: 1px solid #333333;

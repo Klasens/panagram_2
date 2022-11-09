@@ -70,20 +70,20 @@ function increment() {
       const c = +counter.innerText;
 
       const shortIncrement = target / 400;
-      const mediumIncrement = target / 700;
-      const longIncrement = target / 900;
+      const mediumIncrement = target / 600;
+      const longIncrement = target / 800;
       const extraLongIncrement = target / 1000;
 
-      if (c < target && target < 1000) {
+      if (c < target && target < 15000) {
         counter.innerText = `${Math.ceil(c + shortIncrement)}`;
         setTimeout(updateCounter, 1);
-      } else if (c < target && target > 1000 && target < 10000) {
+      } else if (c < target && target > 100000 && target < 1000000) {
         counter.innerText = `${Math.ceil(c + mediumIncrement)}`;
         setTimeout(updateCounter, 1);
-      } else if (c < target && target > 10000 && target < 1000000) {
+      } else if (c < target && target > 1000000 && target < 100000000) {
         counter.innerText = `${Math.ceil(c + longIncrement)}`;
         setTimeout(updateCounter, 1);
-      } else if (c < target && target > 1000000) {
+      } else if (c < target && target > 100000000) {
         counter.innerText = `${Math.ceil(c + extraLongIncrement)}`;
         setTimeout(updateCounter, 1);
       } else {
