@@ -58,7 +58,7 @@ const timeInaYearCard = document.querySelector('#timeInaYear');
 const timeCounters = document.querySelectorAll('.timeCounter');
 
 // Event Listeners
-// timeInaYearCard.addEventListener('click', increment);
+timeInaYearCard.addEventListener('click', increment);
 
 // Functions
 function increment() {
