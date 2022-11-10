@@ -115,6 +115,23 @@
   100% {
     transform: translate(0, 0); } }
 
+/* ---------- CARD MILESTONE SHAPE CONTAINER ANIMATIONS --------- */
+@keyframes cubeRotate {
+  0% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) scale(1); }
+  40% {
+    transform: rotateZ(0deg) rotateX(360deg) rotateY(360deg) scale(1); }
+  50% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2); }
+  52% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2); }
+  65% {
+    transform: rotateZ(0deg) rotateX(360deg) rotateY(360deg) scale(1); }
+  85% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(1); }
+  100% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) scale(1); } }
+
 /**========================================================================
  *                           BASE
  *========================================================================**/
@@ -129,7 +146,6 @@
   box-sizing: border-box; }
 
 html {
-  background: white;
   color: #333333;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 62.5%;
@@ -888,7 +904,7 @@ a {
   width: 3rem;
   height: 3rem;
   background-color: #ffd1aa;
-  margin: 2rem; }
+  margin: 1rem; }
 
 .card-square-right {
   position: absolute;
@@ -896,7 +912,7 @@ a {
   width: 3rem;
   height: 3rem;
   background-color: #ffd1aa;
-  margin: 2rem; }
+  margin: 1rem; }
 
 .card-circle {
   position: absolute;
@@ -1043,7 +1059,7 @@ a {
   position: relative;
   height: 10rem;
   width: 10rem;
-  animation: cubeRotate 15s infinite linear;
+  animation: cubeRotate 25s infinite linear;
   transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d; }
@@ -1079,16 +1095,80 @@ a {
     transform: rotateY(-270deg) translateX(50px);
     transform-origin: top right; }
 
-@keyframes cubeRotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1); }
-  40% {
-    transform: rotateX(360deg) rotateY(360deg) scale(1); }
-  50% {
-    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2); }
-  65% {
-    transform: rotateZ(720deg) rotateX(270deg) rotateY(90deg) scale(1); }
-  95% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1); }
-  100% {
-    transform: rotateX(0deg) rotateY(0deg) scale(1); } }
+/**========================================================================
+ *                          CARD CLOCK 
+ *========================================================================**/
+.backgroundColor-cream {
+  background-color: #ffd1aa; }
+
+.backgroundColor-black {
+  background-color: #333333; }
+
+.backgroundColor-white {
+  background-color: white; }
+
+.color-white {
+  color: white; }
+
+.borderColor-white {
+  border: 2px solid white; }
+
+.borderColor-black {
+  border: 2px solid #333333; }
+
+.card_clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card_clock-contentContainer {
+  width: 85%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.card_clock-clockContainer {
+  position: relative;
+  width: 100%;
+  height: 20rem; }
+
+.card_clock-tag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  background-color: #f88585; }
+
+.card_clock-btn {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  background-color: inherit;
+  cursor: pointer; }
+
+.card_clock-timeDisplay {
+  font-size: 5rem; }
+
+.card_clock-dateDisplay {
+  font-size: 2rem; }
+
+.card_clock-needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 95px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in; }
+
+.card_clock-center {
+  background-color: #fc3b3b;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; }

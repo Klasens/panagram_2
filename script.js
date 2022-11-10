@@ -18,6 +18,7 @@ const cardsArrayOfObjects = [
   { cardID: 'card-baysideRecovery' },
   { cardID: 'card-samBodhiJazz' },
   { cardID: 'card-activityTracker' },
+  { cardID: 'card-clock' },
 ];
 
 /* --------------------------- DREADFULLY LONG IF STATEMENT --------------------------- */
@@ -216,6 +217,27 @@ const loadAllCards = function (array) {
           </div>
       `;
       founderCard.after(html);
+    } else if (el.cardID === 'card-clock') {
+      html = document.createElement('div');
+      html.innerHTML = `
+        <div class='card_clock gridCard-universal backgroundColor-cream' id='cardClock'>
+          <div class='card_clock-contentContainer contentCard-universal'>
+            <span class='card_clock-tag'>Widget</span>
+            <button class='card_clock-btn backgroundColor-cream borderColor-black'>
+              Dark Mode
+            </button>
+            <div class='card_clock-clockContainer'>
+              <div class='card_clock-needle backgroundColor-black hourHand'></div>
+              <div class='card_clock-needle backgroundColor-black minuteHand'></div>
+              <div class='card_clock-needle backgroundColor-black secondHand'></div>
+              <div class='card_clock-center'></div>
+            </div>
+          <div class='card_clock-timeDisplay'></div>
+          <div class='card_clock-dateDisplay'></div>
+        </div>
+      </div>
+      `;
+      smileCard.after(html);
     }
   }
 };

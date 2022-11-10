@@ -50,14 +50,15 @@ heartCard.addEventListener('click', function (e) {
   heartCard.appendChild(heartPop);
   console.log(heartCoordinatesX, heartCoordinatesY);
 });
-/* ------------------- Time in a Year Card ------------------ */
+
+/* ------------------- Milestone Card ------------------ */
 
 // Selectors
 const timeInaYearCard = document.querySelector('#timeInaYear');
 const timeCounters = document.querySelectorAll('.timeCounter');
 
 // Event Listeners
-timeInaYearCard.addEventListener('click', increment);
+// timeInaYearCard.addEventListener('click', increment);
 
 // Functions
 function increment() {
@@ -101,3 +102,117 @@ const randomInt = (min, max) =>
 
 const randomColor = () =>
   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+
+/* ------------------- Clock Card ------------------ */
+
+// Selectors
+const clockCard = document.querySelector('.card_clock');
+const clockBtn = document.querySelector('.card_clock-btn');
+const hourEl = document.querySelector('.hourHand');
+const minuteEl = document.querySelector('.minuteHand');
+const secondEl = document.querySelector('.secondHand');
+const timeEl = document.querySelector('.card_clock-timeDisplay');
+const dateEl = document.querySelector('.card_clock-dateDisplay');
+const circle = document.querySelector('.card_clock-center');
+
+// Arrays
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
+// Toggle Dark & Light Mode
+clockBtn.addEventListener('click', function () {
+  // Card background
+  clockCard.classList.toggle('backgroundColor-cream');
+  clockCard.classList.toggle('borderColor-white');
+
+  // Clock Hands
+  hourEl.classList.toggle('backgroundColor-black');
+  minuteEl.classList.toggle('backgroundColor-black');
+  secondEl.classList.toggle('backgroundColor-black');
+  hourEl.classList.toggle('backgroundColor-white');
+  minuteEl.classList.toggle('backgroundColor-white');
+  secondEl.classList.toggle('backgroundColor-white');
+
+  // Btn
+  clockBtn.classList.toggle('borderColor-black');
+  clockBtn.classList.toggle('borderColor-white');
+  clockBtn.classList.toggle('color-white');
+
+  // Text
+  timeEl.classList.toggle('color-white');
+  dateEl.classList.toggle('color-white');
+});
+
+// Set Date and Time Function
+function setTime() {
+  // Selectors
+  const time = new Date();
+  const month = time.getMonth();
+  const day = time.getDay();
+  const date = time.getDate();
+  const hours = time.getHours();
+  const hoursForClock = hours % 12;
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+
+  // Create Circles for Clock Hands
+  hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    hoursForClock,
+    0,
+    11,
+    0,
+    360
+  )}deg)`;
+  minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    minutes,
+    0,
+    59,
+    0,
+    360
+  )}deg)`;
+  secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    seconds,
+    0,
+    59,
+    0,
+    360
+  )}deg)`;
+
+  // ??
+  timeEl.innerHTML = `${hoursForClock}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  } ${ampm}`;
+
+  // ??
+  dateEl.innerHTML = `${days[day]}, ${months[month]} <span>${date}</span>`;
+}
+
+// ??
+const scale = (number, inMin, inMax, outMin, outMax) => {
+  return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+};
+
+setInterval(setTime, 1000);

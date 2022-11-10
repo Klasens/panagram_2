@@ -129,3 +129,29 @@
     transform: translate(0, 0);
   }
 }
+
+/* ---------- CARD MILESTONE SHAPE CONTAINER ANIMATIONS --------- */
+@keyframes cubeRotate {
+  0% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  40% {
+    transform: rotateZ(0deg) rotateX(360deg) rotateY(360deg) scale(1);
+  }
+  50% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2);
+  }
+  //Cube Pause
+  52% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(0.2);
+  }
+  65% {
+    transform: rotateZ(0deg) rotateX(360deg) rotateY(360deg) scale(1);
+  }
+  85% {
+    transform: rotateZ(90deg) rotateX(180deg) rotateY(180deg) scale(1);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+}
