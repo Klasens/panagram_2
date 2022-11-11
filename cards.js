@@ -143,6 +143,12 @@ const months = [
 
 // Toggle Dark & Light Mode
 clockBtn.addEventListener('click', function () {
+  if (clockBtn.innerText === 'Dark Mode') {
+    clockBtn.innerText = 'Light Mode';
+  } else {
+    clockBtn.innerText = 'Dark Mode';
+  }
+
   // Card background
   clockCard.classList.toggle('backgroundColor-cream');
   clockCard.classList.toggle('borderColor-white');
