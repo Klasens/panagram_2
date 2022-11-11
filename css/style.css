@@ -240,6 +240,7 @@ a {
   grid-column: 1 / 4;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
+  row-gap: 4rem;
   /**============================================
    *             Mobile Small - 600
 @include respond(break-600) {}

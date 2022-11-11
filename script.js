@@ -8,6 +8,7 @@ const gridInner = document.querySelector('.grid-inner');
 const founderCard = document.querySelector('#cardFounder');
 const formCard = document.querySelector('#cardForm');
 const smileCard = document.querySelector('.card_smile');
+const headerBtn = document.querySelector('.card_header-btn');
 
 // Cards Array
 const cardsArrayOfObjects = [
@@ -244,7 +245,9 @@ const loadAllCards = function (array) {
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
-
+headerBtn.addEventListener('click', function () {
+  document.querySelector('.grid-inner').innerHTML = '';
+});
 // Assign each element of an array an ID# property -- UNUSED
 // const assignIDs = function (array) {
 //   const array_IDs = array.slice();
