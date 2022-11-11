@@ -13,6 +13,7 @@ $fontSize-smile: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
   @include center_flex_column;
+  cursor: pointer;
 }
 
 .card_smile-contentContainer {

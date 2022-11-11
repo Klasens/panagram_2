@@ -802,7 +802,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
 
 .card_smile-contentContainer {
   height: 100%; }
