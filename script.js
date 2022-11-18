@@ -121,7 +121,9 @@ const loadAllCards = function (array) {
               "And, today I wake up with the thought, "This could be the final
               morning..."
             </p>
-            <btn class="cardChocolate-btn">Read Now</btn>
+            <btn class="cardChocolate-btn">
+              <a target="_blank" href="andToday.html">Read Now</a>
+            </btn>
           </div>
         </div>
       `;
@@ -195,6 +197,7 @@ const loadAllCards = function (array) {
         </div>
       `;
       smileCard.after(html);
+      /* ------------- CARD APP ------------- */
     } else if (el.cardID === 'card-activityTracker') {
       html = document.createElement('div');
       html.innerHTML = `
@@ -218,6 +221,7 @@ const loadAllCards = function (array) {
           </div>
       `;
       founderCard.after(html);
+      /* ------------- CARD CLOCK ------------- */
     } else if (el.cardID === 'card-clock') {
       html = document.createElement('div');
       html.innerHTML = `

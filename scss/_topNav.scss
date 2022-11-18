@@ -1,0 +1,242 @@
+/**========================================================================
+ *                          TOPNAV 
+ *========================================================================**/
+
+//! ---- ALL NAV & DROPDOWN CONTAINERS ---- //
+//Main Container
+.topNav {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  justify-content: space-between;
+
+  //!Left Wrapper Container
+  &-wrapperLeft {
+    display: flex;
+    align-items: center;
+
+    & > div {
+      height: 80%;
+      margin-left: 4rem;
+    }
+  }
+
+  //Hamburger Menu Container
+  &-hamMenu--container {
+    @include center_flex_column;
+    cursor: pointer;
+  }
+  &-title--container {
+    @include center_flex_column;
+  }
+  &-logo--container {
+    width: 5rem;
+    // background-color: $color-white;
+    @include center_flex_column;
+    background-image: url('../img/cham.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  //!Right Wrapper Container
+  &-wrapperRight {
+    display: flex;
+    align-items: center;
+
+    & > div {
+      margin-right: 6rem;
+      height: 80%;
+    }
+  }
+  &-form--iconContainer {
+    width: 2rem;
+    margin-right: 1rem;
+    @include center_flex_column;
+  }
+  &-form--container {
+    @include center_flex_row;
+  }
+
+  &-form--inputContainer {
+    position: relative;
+  }
+
+  &-userInfo--container {
+    @include center_flex_row;
+  }
+  &-userInfo--iconContainer {
+    margin-right: 2rem;
+    width: 3rem;
+    @include center_flex_column;
+  }
+  &-userInfo--profileContainer {
+    height: 100%;
+    width: 3rem;
+    @include center_flex_column;
+  }
+  //Dropdown Menu Container
+  &-ddMenu--container {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 25rem;
+    height: 90vh;
+    border-top: 2px solid $color-gray;
+    border-right: 2px solid $color-black;
+    border-left: 2px solid $color-black;
+    background-color: $color-black;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  //Dropdown All-Links Container
+  &-ddMenu--allLinksContainer {
+    margin: 5rem 0;
+
+    & > div:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  //Dropdown Individual Link Container
+  &-ddMenu--linkContainer {
+    position: relative;
+    height: 4.5rem;
+    width: 100%;
+    background-color: $color-nav-gray;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+    @include center_flex_column;
+  }
+
+  //Dropdown Arrow Container
+  &-ddMenu--ddArrowContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    margin: 3px;
+    @include center_flex_column;
+  }
+
+  //Categories Container
+  &-ddMenu--categoriesContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.3s;
+
+    & > div:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+  //Category Links Container
+  &-ddMenu--categoryLinkContainer {
+    width: 100%;
+    height: 3rem;
+    background-color: $color-nav-gray-light;
+    display: flex;
+    align-items: center;
+  }
+  //Dropdown Logout Container
+  &-ddMenu--logoutContainer {
+    transform: translateY(0);
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+    width: 100%;
+    @include center_flex_column;
+  }
+}
+
+//! ---- TOP NAV STYLES ---- //
+
+.topNav {
+  //Hamburger Menu
+  &-hamMenu--line {
+    height: 2px;
+    width: 3.5rem;
+    background-color: $color-white;
+    opacity: 1;
+    transform: rotate(0) translateY(0);
+    transition: all 0.3s;
+    &:nth-child(2) {
+      margin: 1rem 0;
+    }
+  }
+
+  &-title--text {
+    font-size: 1.6rem;
+  }
+
+  &-form {
+    &--label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      color: $color-black;
+    }
+  }
+  &-userInfo--profileText {
+    font-size: 2rem;
+  }
+}
+
+//! ---- Dropdown Styles ---- //
+.topNav-ddMenu {
+  &--link {
+    font-size: 2rem;
+  }
+  &--logoutBtn {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    background-color: $color-red;
+  }
+  &--ddArrow {
+    font-size: 1.5rem;
+    color: $color-white;
+    cursor: pointer;
+  }
+  &--categoryLink {
+    color: $color-white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.translateY-100 {
+  transform: translateY(560%);
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.hamHide {
+  opacity: 0;
+}
+
+.hamSlide1 {
+  transform: rotate(45deg) translateY(16px);
+}
+.hamSlide2 {
+  transform: rotate(-45deg) translateY(-17px);
+}

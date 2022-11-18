@@ -152,7 +152,7 @@ html {
   overflow-x: hidden; }
 
 a {
-  color: #0000ee;
+  color: inherit;
   text-decoration: none;
   cursor: pointer; }
 
@@ -372,6 +372,211 @@ a {
   @media (max-width: 62.5em) {
     .col {
       width: 100%; } }
+
+/**========================================================================
+ *                          TOPNAV 
+ *========================================================================**/
+.topNav {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between; }
+  .topNav-wrapperLeft {
+    display: flex;
+    align-items: center; }
+    .topNav-wrapperLeft > div {
+      height: 80%;
+      margin-left: 4rem; }
+  .topNav-hamMenu--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+  .topNav-title--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .topNav-logo--container {
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/cham.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .topNav-wrapperRight {
+    display: flex;
+    align-items: center; }
+    .topNav-wrapperRight > div {
+      margin-right: 6rem;
+      height: 80%; }
+  .topNav-form--iconContainer {
+    width: 2rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .topNav-form--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .topNav-form--inputContainer {
+    position: relative; }
+  .topNav-userInfo--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .topNav-userInfo--iconContainer {
+    margin-right: 2rem;
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .topNav-userInfo--profileContainer {
+    height: 100%;
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .topNav-ddMenu--container {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 25rem;
+    height: 90vh;
+    border-top: 2px solid #969696;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+    background-color: #333333;
+    transform: translateX(-100%);
+    transition: transform 0.5s; }
+  .topNav-ddMenu--allLinksContainer {
+    margin: 5rem 0; }
+    .topNav-ddMenu--allLinksContainer > div:not(:first-child) {
+      margin-top: 2rem; }
+  .topNav-ddMenu--linkContainer {
+    position: relative;
+    height: 4.5rem;
+    width: 100%;
+    background-color: #5a5a5a;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .topNav-ddMenu--ddArrowContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .topNav-ddMenu--categoriesContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.3s; }
+    .topNav-ddMenu--categoriesContainer > div:not(:first-child) {
+      margin-top: 1rem; }
+  .topNav-ddMenu--categoryLinkContainer {
+    width: 100%;
+    height: 3rem;
+    background-color: #7d7d7d;
+    display: flex;
+    align-items: center; }
+  .topNav-ddMenu--logoutContainer {
+    transform: translateY(0);
+    transition: transform 0.3s;
+    transition-delay: 0.3s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.topNav-hamMenu--line {
+  height: 2px;
+  width: 3.5rem;
+  background-color: white;
+  opacity: 1;
+  transform: rotate(0) translateY(0);
+  transition: all 0.3s; }
+  .topNav-hamMenu--line:nth-child(2) {
+    margin: 1rem 0; }
+
+.topNav-title--text {
+  font-size: 1.6rem; }
+
+.topNav-form--label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #333333; }
+
+.topNav-userInfo--profileText {
+  font-size: 2rem; }
+
+.topNav-ddMenu--link {
+  font-size: 2rem; }
+
+.topNav-ddMenu--logoutBtn {
+  font-size: 2rem;
+  padding: 1rem 4rem;
+  border-radius: 5px;
+  background-color: #fc3b3b; }
+
+.topNav-ddMenu--ddArrow {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer; }
+
+.topNav-ddMenu--categoryLink {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 1rem; }
+
+.show {
+  transform: translateX(0); }
+
+.position-absolute {
+  position: absolute; }
+
+.translateY-100 {
+  transform: translateY(560%); }
+
+.opacity-1 {
+  opacity: 1; }
+
+.hamHide {
+  opacity: 0; }
+
+.hamSlide1 {
+  transform: rotate(45deg) translateY(16px); }
+
+.hamSlide2 {
+  transform: rotate(-45deg) translateY(-17px); }
 
 /**========================================================================
  *                          CARD_STYLE1 
@@ -1174,3 +1379,30 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%; }
+
+/**========================================================================
+ *                          CREATIVE NONFICTION 
+ *========================================================================**/
+.creativeNonfiction-landing {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/rob_hat.jpg");
+  background-size: cover; }
+
+.title-container {
+  position: absolute;
+  bottom: 45%;
+  left: 4rem; }
+
+.title-mainHead {
+  color: white;
+  font-size: 8rem; }
+
+.title-authorHead {
+  color: white;
+  font-size: 3.5rem; }
+
+.title-btn {
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 15px; }
