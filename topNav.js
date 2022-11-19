@@ -18,12 +18,14 @@ const ddArrowNonfiction_short = document.querySelector(
 const ddArrowShortStories = document.querySelector('#ddArrow-shortStories');
 const ddArrowAphorisms = document.querySelector('#ddArrow-aphorisms');
 const ddArrowArticles = document.querySelector('#ddArrow-articles');
+const ddArrowtheGreenerSide = document.querySelector('#ddArrow-theGreenerSide');
 //----- LISTS
 const nonfictionList_long = document.querySelector('#list-nonfiction-long');
 const nonfictionList_short = document.querySelector('#list-nonfiction-short');
 const shortStoriesList = document.querySelector('#list-shortStories');
 const aphorismsList = document.querySelector('#list-aphorisms');
 const articlesList = document.querySelector('#list-articles');
+const theGreenerSideList = document.querySelector('#list-theGreenerSide');
 //----- CATEGORIES
 const nonfiction_long = document.querySelector('#nonfiction-long');
 const nonfiction_short = document.querySelector('#nonfiction-short');
