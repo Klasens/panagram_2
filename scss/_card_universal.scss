@@ -31,6 +31,10 @@ $borderRadius--btn: 2rem;
   overflow: hidden;
   transform: translateY(50%);
   transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1);
+  }
 }
 
 // ----- Inner Container
@@ -68,6 +72,11 @@ $borderRadius--btn: 2rem;
     border-radius: $borderRadius--btn;
     border: 2px solid $color-white;
     cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-gray-boxShadow;
+    }
   }
 }
 

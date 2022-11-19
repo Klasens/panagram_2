@@ -17,80 +17,38 @@
   &-wrapperLeft {
     display: flex;
     align-items: center;
-
-    & > div {
-      height: 80%;
-      margin-left: 4rem;
-    }
   }
 
   //Hamburger Menu Container
   &-hamMenu--container {
     @include center_flex_column;
     cursor: pointer;
-  }
-  &-title--container {
-    @include center_flex_column;
-  }
-  &-logo--container {
-    width: 5rem;
-    // background-color: $color-white;
-    @include center_flex_column;
-    background-image: url('../img/cham.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-left: 2rem;
   }
 
   //!Right Wrapper Container
   &-wrapperRight {
     display: flex;
     align-items: center;
-
-    & > div {
-      margin-right: 6rem;
-      height: 80%;
-    }
-  }
-  &-form--iconContainer {
-    width: 2rem;
-    margin-right: 1rem;
-    @include center_flex_column;
-  }
-  &-form--container {
-    @include center_flex_row;
-  }
-
-  &-form--inputContainer {
-    position: relative;
-  }
-
-  &-userInfo--container {
-    @include center_flex_row;
-  }
-  &-userInfo--iconContainer {
-    margin-right: 2rem;
-    width: 3rem;
-    @include center_flex_column;
-  }
-  &-userInfo--profileContainer {
-    height: 100%;
-    width: 3rem;
-    @include center_flex_column;
+    justify-content: center;
   }
   //Dropdown Menu Container
   &-ddMenu--container {
+    z-index: 10;
     position: absolute;
     top: 10vh;
     left: 0;
-    width: 25rem;
+    width: 35rem;
     height: 90vh;
     border-top: 2px solid $color-gray;
     border-right: 2px solid $color-black;
     border-left: 2px solid $color-black;
     background-color: $color-black;
     transform: translateX(-100%);
-    transition: transform 0.5s;
+    transition: all 0.3s;
+    @include respond(break-850) {
+      width: 100%;
+    }
   }
 
   //Dropdown All-Links Container
@@ -102,6 +60,14 @@
     }
   }
 
+  &-ddMenu--header {
+    width: 100%;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+  }
   //Dropdown Individual Link Container
   &-ddMenu--linkContainer {
     position: relative;
@@ -126,7 +92,7 @@
   }
 
   //Categories Container
-  &-ddMenu--categoriesContainer {
+  &-ddMenu--listContainer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -140,12 +106,19 @@
     }
   }
   //Category Links Container
-  &-ddMenu--categoryLinkContainer {
+  &-ddMenu--listLinkContainer {
     width: 100%;
-    height: 3rem;
+    height: min-content;
     background-color: $color-nav-gray-light;
     display: flex;
     align-items: center;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-nav-gray;
+    }
   }
   //Dropdown Logout Container
   &-ddMenu--logoutContainer {
@@ -160,6 +133,7 @@
 //! ---- TOP NAV STYLES ---- //
 
 .topNav {
+  position: relative;
   //Hamburger Menu
   &-hamMenu--line {
     height: 2px;
@@ -174,20 +148,16 @@
   }
 
   &-title--text {
-    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
   }
 
-  &-form {
-    &--label {
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      transform: translateY(-50%);
-      color: $color-black;
-    }
-  }
-  &-userInfo--profileText {
+  &-link {
     font-size: 2rem;
+    margin-right: 2rem;
   }
 }
 
@@ -206,11 +176,13 @@
     font-size: 1.5rem;
     color: $color-white;
     cursor: pointer;
+    transition: transform 0.3s;
   }
   &--categoryLink {
     color: $color-white;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-left: 1rem;
+    padding: 0.5rem 0;
   }
 }
 
@@ -223,7 +195,16 @@
 }
 
 .translateY-100 {
-  transform: translateY(560%);
+  transform: translateY(100%);
+}
+.translateY-550 {
+  transform: translateY(550%);
+}
+.translateY-800 {
+  transform: translateY(800%);
+}
+.translateY-1600 {
+  transform: translateY(1600%);
 }
 
 .opacity-1 {
@@ -239,4 +220,16 @@
 }
 .hamSlide2 {
   transform: rotate(-45deg) translateY(-17px);
+}
+
+.rotate-180 {
+  transform: rotateX(180deg);
+}
+
+.height-125vh {
+  height: 125vh;
+}
+
+.creativeNonfiction-content {
+  height: 100vh;
 }

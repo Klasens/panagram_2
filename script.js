@@ -100,7 +100,9 @@ const loadAllCards = function (array) {
               "Usually I just sit on the bus having conversations with
               myself..."
             </p>
-            <btn class="cardChocolate-btn">Read Now</btn>
+            <a target="_blank" href="#" class="cardChocolate-btn">
+              Read Now
+            </a>
           </div>
         </div>
       `;
@@ -121,9 +123,9 @@ const loadAllCards = function (array) {
               "And, today I wake up with the thought, "This could be the final
               morning..."
             </p>
-            <btn class="cardChocolate-btn">
-              <a target="_blank" href="andToday.html">Read Now</a>
-            </btn>
+            <a target="_blank" href="andToday.html" class="cardChocolate-btn">
+              Read Now
+            </a>
           </div>
         </div>
       `;
@@ -144,7 +146,9 @@ const loadAllCards = function (array) {
               "As I wake up I feel a pulsing in my foot. There's this slight
               pulling in the tendon that produces discomfort but not pain..."
             </p>
-            <btn class="cardChocolate-btn">Read Now</btn>
+            <a target="_blank" href="#" class="cardChocolate-btn">
+              Read Now
+            </a>
           </div>
         </div>
       `;
