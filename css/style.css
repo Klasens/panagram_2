@@ -387,6 +387,11 @@ a {
   color: white;
   display: flex;
   justify-content: space-between; }
+  .topNav-ddMenu--logo {
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 4rem auto 0;
+    text-align: center; }
   .topNav-wrapperLeft {
     display: flex;
     align-items: center; }
@@ -402,11 +407,11 @@ a {
     align-items: center;
     justify-content: center; }
   .topNav-ddMenu--container {
-    z-index: 10;
+    z-index: 1;
     position: absolute;
     top: 10vh;
     left: 0;
-    width: 35rem;
+    width: 30rem;
     height: 90vh;
     border-top: 2px solid #969696;
     border-right: 2px solid #333333;
@@ -456,6 +461,18 @@ a {
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: 300; }
+  .topNav-ddMenu--btnContact {
+    background-color: #5a5a5a;
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    transition: background-color 0.3s;
+    cursor: pointer; }
+    .topNav-ddMenu--btnContact:hover {
+      background-color: #fc3b3b; }
   .topNav-ddMenu--linkContainer {
     position: relative;
     height: 4.5rem;
@@ -481,16 +498,26 @@ a {
     align-items: center; }
   .topNav-ddMenu--listContainer {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     width: 90%;
     opacity: 0;
     transition: opacity 0.3s;
     transition-delay: 0.3s; }
     .topNav-ddMenu--listContainer > div:not(:first-child) {
       margin-top: 1rem; }
+  .topNav-ddMenu--miniListContainer {
+    position: absolute;
+    padding: 1rem;
+    top: 50%;
+    right: -20%;
+    background-color: #464646;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: opacity 0.3s;
+    transition-delay: 0.3s; }
+    .topNav-ddMenu--miniListContainer > div:not(:first-child) {
+      margin-top: 1rem; }
   .topNav-ddMenu--listLinkContainer {
-    width: 100%;
+    padding: 0 0.5rem;
     height: min-content;
     background-color: #7d7d7d;
     display: flex;
@@ -499,7 +526,8 @@ a {
     transition: background-color 0.3s;
     cursor: pointer; }
     .topNav-ddMenu--listLinkContainer:hover {
-      background-color: #5a5a5a; }
+      z-index: 2;
+      background-color: #fc3b3b; }
   .topNav-ddMenu--logoutContainer {
     transform: translateY(0);
     transition: transform 0.3s;
@@ -509,6 +537,11 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+
+#ddArrow-theGreenerSide {
+  position: relative;
+  left: 2.5rem;
+  transform: rotateZ(-90deg); }
 
 .topNav {
   position: relative; }
@@ -544,7 +577,14 @@ a {
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  transition: transform 0.3s; }
+  transition: transform 0.3s;
+  transform: rotateZ(-90deg); }
+  .topNav-ddMenu--ddArrow--shortStories {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: rotateY(180deg); }
 
 .topNav-ddMenu--categoryLink {
   color: white;
@@ -552,14 +592,23 @@ a {
   margin-left: 1rem;
   padding: 0.5rem 0; }
 
+.miniLink {
+  color: white;
+  font-size: 1.6rem;
+  margin-left: 0rem;
+  padding: 0.5rem 0; }
+
 .show {
   transform: translateX(0); }
+
+.z-index-10 {
+  z-index: 10; }
 
 .position-absolute {
   position: absolute; }
 
 .translateY-100 {
-  transform: translateY(100%); }
+  transform: translateY(180%); }
 
 .translateY-550 {
   transform: translateY(550%); }
@@ -582,14 +631,34 @@ a {
 .hamSlide2 {
   transform: rotate(-45deg) translateY(-17px); }
 
-.rotate-180 {
+.rotateX-180 {
   transform: rotateX(180deg); }
+
+.rotateZ-90 {
+  transform: rotateZ(90deg); }
 
 .height-125vh {
   height: 125vh; }
 
 .creativeNonfiction-content {
   height: 100vh; }
+
+.list-settings {
+  background-color: #464646;
+  transform: translateX(80%);
+  top: 0%;
+  padding: 2rem;
+  width: 40rem; }
+
+.list-shortStories {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.list-header {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  font-weight: 300;
+  text-align: center; }
 
 /**========================================================================
  *                          CARD_STYLE1 
@@ -1404,6 +1473,7 @@ a {
 .creativeNonfiction-landing {
   position: relative;
   height: 100vh;
+  width: 100%;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/rob_hat.jpg");
   background-size: cover; }
 
