@@ -123,7 +123,7 @@ const loadAllCards = function (array) {
               "And, today I wake up with the thought, "This could be the final
               morning..."
             </p>
-            <a target="_blank" href="andToday.html" class="cardChocolate-btn">
+            <a target="_blank" href="chapter1.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>

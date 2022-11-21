@@ -601,6 +601,9 @@ a {
 .show {
   transform: translateX(0); }
 
+.hidden {
+  display: none; }
+
 .z-index-10 {
   z-index: 10; }
 
@@ -1494,3 +1497,119 @@ a {
   font-size: 1.5rem;
   padding: 1rem 0.5rem;
   border-radius: 15px; }
+
+/**========================================================================
+ *                          CREATIVE NONFICTION 
+ *========================================================================**/
+h1 {
+  font-size: 5rem; }
+
+h2 {
+  font-size: 10rem;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.pageContainer {
+  position: relative; }
+
+.chapter-landing {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%; }
+  .chapter-landing--prologue {
+    background-image: linear-gradient(to right, black 15%, rgba(0, 0, 0, 0) 25% 75%, black 85%), url("../img/prologue.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .chapter-landing--c1 {
+    background-image: linear-gradient(to right, black 0 35%, rgba(0, 0, 0, 0) 40% 55%, black 85%), url("../img/chapter1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 45%; }
+  .chapter-landing--c2 {
+    background-image: linear-gradient(to right, black 0 25%, rgba(0, 0, 0, 0) 30%), url("../img/chapter2.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 45%; }
+  .chapter-landing--c3 {
+    background-image: linear-gradient(to right, black 0 20%, rgba(0, 0, 0, 0) 25%), url("../img/rob_hat.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 45%; }
+
+.chapter-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+  .chapter-content::after {
+    z-index: -1;
+    background-image: url(../img/staticNoise.jpg);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.03;
+    width: 100%;
+    height: 100%; }
+
+.chapter-text > * {
+  margin-top: 3rem; }
+
+.title {
+  display: flex;
+  flex-direction: column; }
+  .title-landing {
+    position: absolute;
+    color: white; }
+    .title-landing--prologue {
+      bottom: 40%;
+      left: 6rem; }
+    .title-landing--c1 {
+      bottom: 40%;
+      left: 3rem; }
+    .title-landing--c2 {
+      bottom: 40%;
+      left: 3rem; }
+    .title-landing--c3 {
+      bottom: 40%;
+      left: 3rem; }
+    .title-landing > *:not(:first-child) {
+      margin-top: 1rem; }
+  .title-content {
+    color: #333333;
+    margin-top: 2rem; }
+  .title-chapterTitle {
+    text-align: center; }
+  .title-authorName {
+    font-size: 1.8rem;
+    margin-top: 3rem; }
+  .title-btn {
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+    width: 10rem;
+    border-radius: 15px;
+    z-index: 100;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+    .title-btn:hover {
+      background-color: #494949; }
+
+.text {
+  line-height: 2.9rem;
+  font-size: 2rem; }
+
+.footer {
+  position: relative;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  border-top: solid 1px #494949;
+  font-size: 1.8rem; }
+  .footer-logo {
+    position: absolute;
+    left: 1rem; }
