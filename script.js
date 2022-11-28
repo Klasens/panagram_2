@@ -171,12 +171,12 @@ const loadAllCards = function (array) {
             </div>
             <h2 class="cardCream-h2">Sam Bodhi Jazz</h2>
             <p class="cardCream-text">Website &mdash; local jazz musician</p>
-            <button class="cardCream-btn">View</button>
+            <button class="cardCream-btn"><a href="http://sambodhijazz.getforge.io/">View</a></button>
           </div>
         </div>
       `;
       founderCard.after(html);
-      /* ------------- CARD BAYSIDE RECOVERY ------------- */
+      /* ------------- CARD MM.ORG ------------- */
     } else if (el.cardID === 'card-baysideRecovery') {
       html = document.createElement('div');
       html.innerHTML = `
@@ -188,15 +188,15 @@ const loadAllCards = function (array) {
             <div class="card-iconContainer">
               <img
                 class="card-icon"
-                src="./img/boat.png"
-                alt="piano-image https://iconscout.com/"
+                src="./img/pencil.png"
+                alt="pencil-image https://iconscout.com/"
               />
             </div>
-            <h2 class="cardCream-h2">Bayside Recovery</h2>
+            <h2 class="cardCream-h2">Maxamillennial.org</h2>
             <p class="cardCream-text">
-              Website &mdash; local marine recovery 
+              Website &mdash; author's portfolio 
             </p>
-            <button class="cardCream-btn">View</button>
+            <button class="cardCream-btn"><a href="http://maxamillennial.getforge.io/">View</a></button>
           </div>
         </div>
       `;
@@ -219,8 +219,8 @@ const loadAllCards = function (array) {
                 </div>
               </div>
               <h2 class="cardCream-h2">Activity Tracker</h2>
-              <p class="cardCream-text">An app to keep you on track.</p>
-              <button class="cardCream-btn">Sign Up</button>
+              <p class="cardCream-text">An app to keep you on track</p>
+              <button class="cardCream-btn"><a href="http://activitytracker.org/">Sign Up</a></button>
             </div>
           </div>
       `;
@@ -253,9 +253,13 @@ const loadAllCards = function (array) {
 
 //!DISPLAY CARDS RANDOMLY ON PAGE
 loadAllCards(cardsArrayOfObjects);
-headerBtn.addEventListener('click', function () {
-  document.querySelector('.grid-inner').innerHTML = '';
-});
+
+//!DELETE ALL CARDS ON PAGE
+// headerBtn.addEventListener('click', function () {
+//   document.querySelector('.grid-inner').innerHTML = '';
+// });
+
+//!ASSIGN ALL CARDS IDS
 // Assign each element of an array an ID# property -- UNUSED
 // const assignIDs = function (array) {
 //   const array_IDs = array.slice();
