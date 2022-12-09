@@ -95,12 +95,11 @@ const loadAllCards = function (array) {
             <span class="cardChocolate-tag card_nonfiction-tag">
               Creative Non-Fiction
             </span>
-            <h2 class="cardChocolate-h2">The Watchers</h2>
+            <h2 class="cardChocolate-h2">Severed</h2>
             <p class="cardChocolate-text">
-              "Usually I just sit on the bus having conversations with
-              myself..."
+              "I watched the man attempt to raise his arms but only the right one moved."
             </p>
-            <a target="_blank" href="#" class="cardChocolate-btn">
+            <a target="_blank" href="http://maxamillennial.getforge.io/severed.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>
@@ -118,12 +117,11 @@ const loadAllCards = function (array) {
             <span class="cardChocolate-tag card_nonfiction-tag">
               Creative Non-Fiction
             </span>
-            <h2 class="cardChocolate-h2">And, Today</h2>
+            <h2 class="cardChocolate-h2">The Sonderer</h2>
             <p class="cardChocolate-text">
-              "And, today I wake up with the thought, "This could be the final
-              morning..."
+              "There are basic facts about the world that we take for granted, but there are some we don't."
             </p>
-            <a target="_blank" href="chapter1.html" class="cardChocolate-btn">
+            <a target="_blank" href="http://maxamillennial.getforge.io/theSonderer.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>
@@ -141,12 +139,11 @@ const loadAllCards = function (array) {
             <span class="cardChocolate-tag card_fiction-tag">
               Fiction
             </span>
-            <h2 class="cardChocolate-h2">Mirror In the Mirror</h2>
+            <h2 class="cardChocolate-h2">A Chair To Nowhere</h2>
             <p class="cardChocolate-text">
-              "As I wake up I feel a pulsing in my foot. There's this slight
-              pulling in the tendon that produces discomfort but not pain..."
+              "I woke up with my hands tied and my feet bound to the legs of this chair."
             </p>
-            <a target="_blank" href="#" class="cardChocolate-btn">
+            <a target="_blank" href="https://maxamillennial.getforge.io/achairtonowhere.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>
