@@ -217,7 +217,7 @@ const loadAllCards = function (array) {
               </div>
               <h2 class="cardCream-h2">Activity Tracker</h2>
               <p class="cardCream-text">An app to keep you on track</p>
-              <button class="cardCream-btn"><a href="http://activitytracker.org/">Sign Up</a></button>
+              <button class="cardCream-btn"><a href="http://activitytracker.org/">Sign Up (coming soon)</a></button>
             </div>
           </div>
       `;
