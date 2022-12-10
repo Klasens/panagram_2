@@ -26,11 +26,13 @@
 }
 
 .grid-inner {
+  position: relative;
   display: grid;
   grid-column: 1 / 4;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
   row-gap: 4rem;
+  height: min-content;
   @include respond(break-1400) {
     grid-template-columns: 1fr;
   }
@@ -41,6 +43,9 @@
 
 .col {
   height: min-content;
+  opacity: 1;
+  transition: all 1s;
+
   & > div:not(:first-child) {
     margin-top: 4rem;
   }

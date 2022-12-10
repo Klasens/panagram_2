@@ -5,10 +5,40 @@
 
 const grid = document.querySelector('.grid');
 const gridInner = document.querySelector('.grid-inner');
+const flipGrid = document.querySelector('#flipGrid');
 const founderCard = document.querySelector('#cardFounder');
 const formCard = document.querySelector('#cardForm');
 const smileCard = document.querySelector('.card_smile');
 const headerBtn = document.querySelector('.card_header-btn');
+const allCols = document.querySelectorAll('.col');
+const mainFooter = document.querySelector('#mainFooter');
+
+//ARTICLE SELECTORS
+const article1 = document.querySelector('#article1');
+const article2 = document.querySelector('#article2');
+const article3 = document.querySelector('#article3');
+const article4 = document.querySelector('#article4');
+const article5 = document.querySelector('#article5');
+const article6 = document.querySelector('#article6');
+
+headerBtn.addEventListener('click', function () {
+  article1.classList.toggle('translate-1');
+  article4.classList.toggle('translate-1');
+  article3.classList.toggle('translate-2');
+  article6.classList.toggle('translate-2');
+  article2.classList.toggle('rotate-1');
+  article5.classList.toggle('rotate-1');
+  flipGrid.classList.toggle('opacity-0');
+  flipGrid.classList.toggle('pointerEvents-none');
+  for (let i = 0; i < allCols.length; i++) {
+    allCols[i].classList.toggle('opacity-0');
+    allCols[i].classList.toggle('pointerEvents-none');
+    allCols[i].classList.toggle('height-0');
+  }
+  mainFooter.classList.toggle('opacity-0');
+  mainFooter.classList.toggle('pointerEvents-none');
+  mainFooter.classList.toggle('height-0');
+});
 
 // Cards Array
 const cardsArrayOfObjects = [
