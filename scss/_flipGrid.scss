@@ -21,7 +21,7 @@
 }
 
 .card_article {
-  background-color: $color-teal-opaque;
+  background-color: $color-chocolate;
   @include center_flex_column;
   border-radius: 15px;
   overflow: hidden;
@@ -73,4 +73,23 @@
 
 #flipFooter {
   padding: 2rem 0;
+  background-color: $color-chocolate;
+  color: $color-off-white-2;
+}
+
+.background-off-white-2 {
+  background-color: $color-off-white-2;
+}
+.color-off-white-2 {
+  color: $color-off-white-2;
+}
+
+.background-chocolate {
+  background-color: $color-chocolate;
+}
+.color-chocolate {
+  color: $color-chocolate;
+}
+.border-left-off-white-2 {
+  border-left: 1px solid $color-off-white-2;
 }

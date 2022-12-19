@@ -8,7 +8,7 @@
   @include center_flex_column;
   border-radius: 15px;
   overflow: hidden;
-  // display: none;
+  transition: all 1s;
 }
 
 .card_header-contentContainer {

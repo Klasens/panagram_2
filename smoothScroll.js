@@ -1,9 +1,9 @@
 'use strict';
 
-const scrollBtn = document.querySelector('.title-btn');
-const scrollContent = document.querySelector('.chapter-content');
+const scrollBtn = document.querySelector('.article-header--btn');
+const scrollContent = document.querySelector('.article-content--header');
 
-document.addEventListener('click', function (e) {
+scrollBtn.addEventListener('click', function (e) {
   e.preventDefault();
   scrollContent.scrollIntoView({ behavior: 'smooth' });
 });

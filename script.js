@@ -9,9 +9,15 @@ const flipGrid = document.querySelector('#flipGrid');
 const founderCard = document.querySelector('#cardFounder');
 const formCard = document.querySelector('#cardForm');
 const smileCard = document.querySelector('.card_smile');
-const headerBtn = document.querySelector('.card_header-btn');
 const allCols = document.querySelectorAll('.col');
 const mainFooter = document.querySelector('#mainFooter');
+const fullPage = document.querySelector('.grid_container');
+const headerCard = document.querySelector('.card_header');
+const headerTag = document.querySelector('.card_header-tag');
+const headerMainHead = document.querySelector('.card_header-mainHead');
+const headerText = document.querySelector('.card_header-text');
+const headerBtn = document.querySelector('.card_header-btn');
+const headerSubHead = document.querySelector('.card_header-subHead');
 
 //ARTICLE SELECTORS
 const article1 = document.querySelector('#article1');
@@ -38,6 +44,15 @@ headerBtn.addEventListener('click', function () {
   mainFooter.classList.toggle('opacity-0');
   mainFooter.classList.toggle('pointerEvents-none');
   mainFooter.classList.toggle('height-0');
+  headerCard.classList.toggle('background-chocolate');
+  fullPage.classList.toggle('background-off-white-2');
+  headerTag.classList.toggle('background-off-white-2');
+  headerMainHead.classList.toggle('color-off-white-2');
+  headerText.classList.toggle('color-off-white-2');
+  headerText.classList.toggle('border-left-off-white-2');
+  headerBtn.classList.toggle('background-off-white-2');
+  headerBtn.classList.toggle('color-chocolate');
+  headerSubHead.classList.toggle('color-off-white-2');
 });
 
 // Cards Array
