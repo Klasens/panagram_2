@@ -12,11 +12,9 @@
   column-gap: 4rem;
   row-gap: 4rem;
   transition: all 1s;
-  @include respond(break-1400) {
-    grid-template-columns: 1fr;
-  }
   @include respond(break-1000) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 
