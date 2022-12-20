@@ -20,6 +20,31 @@ gulp.task('nunjucks', function () {
         })
       )
       .pipe(
+        data(function () {
+          return require('./theoryArticles/howDoesAPanagramStart.json');
+        })
+      )
+      .pipe(
+        data(function () {
+          return require('./theoryArticles/panagramAndFlowState.json');
+        })
+      )
+      .pipe(
+        data(function () {
+          return require('./theoryArticles/panagramExtensionsGTD.json');
+        })
+      )
+      .pipe(
+        data(function () {
+          return require('./theoryArticles/panagramsAndTheClassicRomanticSplit.json');
+        })
+      )
+      .pipe(
+        data(function () {
+          return require('./theoryArticles/panagramWork.json');
+        })
+      )
+      .pipe(
         nunjucksRender({
           path: ['templates'],
         })

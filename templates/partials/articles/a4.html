@@ -6,7 +6,7 @@
   <div class="article-landing background background-a4">
     <div class="article-header">
       <h1 class="article-header--articleNumber">Article 4</h1>
-      <h1 class="article-header-title">Life Energy of a Panagram</h1>
+      <h1 class="article-header-title">How Does A Panagram Start?</h1>
       <span class="article-header--authorName">By Robert Klasen</span>
       <button class="article-header--btn">Read Now</button>
     </div>
@@ -18,12 +18,12 @@
   <div class="article-content">
     <div id="scrollAdhoc"></div>
     <div class="article-content--header">
-      <h2 class="article-content-chapterTitle">Life Energy of a Panagram</h2>
+      <h2 class="article-content-chapterTitle">How Does A Panagram Start?</h2>
       <span class="article-content--authorName">By Robert Klasen</span>
     </div>
     <div class="article-text">
       <!-- LOOP NJK-->
-      {% for text in whatIsAPanagram %}
+      {% for text in howDoesAPanagramStart %}
       <p class="text">{{text.paragraph}}</p>
       {% endfor %}
     </div>
@@ -32,8 +32,9 @@
   <!-- ------ -->
   <!-- Footer -->
   <!-- ------ -->
-  <div class="article-footer justifyContent-even">
-    <a href="#" class="footer-link">&larr; Previous Article</a>
-    <a href="#" class="footer-link">Next Article &rarr;</a>
+  <div class="article-footer justifyContent-center">
+    <a href="https://panagram.work/" class="footer-link">
+      Back to Panagram &rarr;
+    </a>
   </div>
 </section>

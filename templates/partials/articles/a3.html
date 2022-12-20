@@ -23,7 +23,7 @@
     </div>
     <div class="article-text">
       <!-- LOOP NJK-->
-      {% for text in whatIsAPanagram %}
+      {% for text in panagramAndFlowState %}
       <p class="text">{{text.paragraph}}</p>
       {% endfor %}
     </div>
@@ -32,8 +32,9 @@
   <!-- ------ -->
   <!-- Footer -->
   <!-- ------ -->
-  <div class="article-footer justifyContent-even">
-    <a href="#" class="footer-link">&larr; Previous Article</a>
-    <a href="#" class="footer-link">Next Article &rarr;</a>
+  <div class="article-footer justifyContent-center">
+    <a href="https://panagram.work/" class="footer-link">
+      Back to Panagram &rarr;
+    </a>
   </div>
 </section>
