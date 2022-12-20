@@ -144,7 +144,7 @@ const loadAllCards = function (array) {
             <p class="cardChocolate-text">
               "I watched the man attempt to raise his arms but only the right one moved."
             </p>
-            <a target="_blank" href="http://maxamillennial.getforge.io/severed.html" class="cardChocolate-btn">
+            <a target="_blank" href="https://maxamillennial.org/severed.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>
@@ -166,7 +166,7 @@ const loadAllCards = function (array) {
             <p class="cardChocolate-text">
               "There are basic facts about the world that we take for granted, but there are some we don't."
             </p>
-            <a target="_blank" href="http://maxamillennial.getforge.io/theSonderer.html" class="cardChocolate-btn">
+            <a target="_blank" href="https://maxamillennial.org/theSonderer.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>
@@ -188,7 +188,7 @@ const loadAllCards = function (array) {
             <p class="cardChocolate-text">
               "I woke up with my hands tied and my feet bound to the legs of this chair."
             </p>
-            <a target="_blank" href="https://maxamillennial.getforge.io/achairtonowhere.html" class="cardChocolate-btn">
+            <a target="_blank" href="https://maxamillennial.org/achairtonowhere.html" class="cardChocolate-btn">
               Read Now
             </a>
           </div>
@@ -238,7 +238,7 @@ const loadAllCards = function (array) {
             <p class="cardCream-text">
               Website &mdash; author's portfolio 
             </p>
-            <button class="cardCream-btn"><a href="http://maxamillennial.getforge.io/">View</a></button>
+            <button class="cardCream-btn"><a href="https://maxamillennial.org/index.html">View</a></button>
           </div>
         </div>
       `;
